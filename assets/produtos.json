@@ -1,185 +1,211 @@
 [
     {
         "id":1,
-        "nome": "Cama Rosa",
+        
         "descricao":"Medidas: 45cm x 45cm ",
         "preco":50.00,
-        "imagem": "https://images.tcdn.com.br/img/img_prod/748584/cama_pet_para_cachorro_coroa_azul_tamanho_m_60x60_29_1_687f2bfd6cc2dec5fa7a566de7a1e678.jpg"
+        "imagem": "https://images.tcdn.com.br/img/img_prod/748584/cama_pet_para_cachorro_coroa_azul_tamanho_m_60x60_29_1_687f2bfd6cc2dec5fa7a566de7a1e678.jpg",
+    "nome": "Cama Rosa"
     },
     {
         "id":2,
-        "nome":"Cama de melancia",
+        
         "descricao":"Medidas: 55cm x 43cm",
         "preco":60.00,
-        "imagem":"https://a-static.mlcdn.com.br/800x560/cama-caminha-cachorro-pet-melancia-tamanho-m-65x53cm-emporium-distripet/petletstore/13576267046/7a0f5b621c6c3471fed62b3ab46c6b59.jpg"
+        "imagem":"https://a-static.mlcdn.com.br/800x560/cama-caminha-cachorro-pet-melancia-tamanho-m-65x53cm-emporium-distripet/petletstore/13576267046/7a0f5b621c6c3471fed62b3ab46c6b59.jpg",
+    "nome":"Cama de melancia"
     },
     {
         "id":3,
-        "nome":"Cama azul com tapete",
+       
         "descricao":"Medidas: 65cm x 53cm",
         "preco":90.00,
-        "imagem":"https://kaluah.cdn.magazord.com.br/img/2022/10/produto/3014/cama-pet-cachorro-azul-cs2037.jpg?ims=fit-in/600x600/filters:fill(white)" 
+        "imagem":"https://kaluah.cdn.magazord.com.br/img/2022/10/produto/3014/cama-pet-cachorro-azul-cs2037.jpg?ims=fit-in/600x600/filters:fill(white)", 
+    "nome":"Cama azul com tapete"
     },
     {
         "id":4,
-        "nome":"Cama simples preta",
+        
         "descricao":"Medidas: 53cm x 30cm",
         "preco":30.00,
-        "imagem":"https://www.petmimos.com.br/cdn/shop/products/promocao-cama-para-cachorro-sofa-nuvem-lavavel-369703_1200x1200.webp?v=1685313854" 
+        "imagem":"https://www.petmimos.com.br/cdn/shop/products/promocao-cama-para-cachorro-sofa-nuvem-lavavel-369703_1200x1200.webp?v=1685313854" ,
+   "nome":"Cama simples preta"
     },
     {
         "id":5,
-        "nome":"Cama luxo rose",
+        
         "descricao":"Medidas: 75cm x 63cm",
         "preco":120.00,
-        "imagem":"https://images.tcdn.com.br/img/img_prod/908661/cama_pet_cachorro_porte_grande_fibra_sintetica_100x60cm_luxo_bathtub_veludo_rose_bedfurpets_73_1_36f21422679216d70e2522ceeeb13b41.jpg" 
+        "imagem":"https://images.tcdn.com.br/img/img_prod/908661/cama_pet_cachorro_porte_grande_fibra_sintetica_100x60cm_luxo_bathtub_veludo_rose_bedfurpets_73_1_36f21422679216d70e2522ceeeb13b41.jpg" ,
+   "nome":"Cama luxo rose"
     },
     {
         "id":6,
-        "nome":"Cama simples amarela",
+        
         "descricao":"Medidas: 53cm x 30cm",
         "preco":30.00,
-        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7wbFTTQveQULop0WfVegdtpbq86iPQ8Wuw&s" 
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7wbFTTQveQULop0WfVegdtpbq86iPQ8Wuw&s" ,
+"nome":"Cama simples amarela"
     },
     {
         "id":7,
-        "nome":"Cama azul com patinhas",
+        
         "descricao":"Medidas: 70cm x 70cm",
         "preco":30.00,
-        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPzqLceW627D06cgJLiUm6uQbm9Pz0IHu1SS5MXK3jSZGWoR_DWMKmsHl6cFEZG7NuJa0&usqp=CAU" 
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPzqLceW627D06cgJLiUm6uQbm9Pz0IHu1SS5MXK3jSZGWoR_DWMKmsHl6cFEZG7NuJa0&usqp=CAU" ,
+    "nome":"Cama azul com patinhas"
     },
     {
         "id":8,
-        "nome":"Cama redonda para gatinhos",
+        
         "descricao":"Medidas: 53cm x 30cm",
         "preco":60.00,
-        "imagem":"https://favoritatrend.com/cdn/shop/files/IMG_5361_800x.jpg?v=1696205830" 
+        "imagem":"https://favoritatrend.com/cdn/shop/files/IMG_5361_800x.jpg?v=1696205830" ,
+"nome":"Cama redonda para gatinhos"
     },
     {
         "id":9,
-        "nome":"Cama redonda simples verde escuro",
+        
         "descricao":"Medidas: 53cm x 30cm",
         "preco":30.00,
-        "imagem":"https://acdn.mitiendanube.com/stores/002/929/084/products/verde1-997cf29cd1274b899d16933398827147-640-0.png" 
+        "imagem":"https://acdn.mitiendanube.com/stores/002/929/084/products/verde1-997cf29cd1274b899d16933398827147-640-0.png" ,
+    "nome":"Cama redonda simples verde escuro"
     },
     {
         "id":10,
-        "nome":"Cama de macramê",
+        
         "descricao":"Medidas: 53cm x 30cm",
         "preco":79.00,
-        "imagem":"https://m.media-amazon.com/images/I/71Q3OLJfy5L._AC_UF1000,1000_QL80_.jpg" 
+        "imagem":"https://m.media-amazon.com/images/I/71Q3OLJfy5L._AC_UF1000,1000_QL80_.jpg" ,
+"nome":"Cama de macramê"
     },
     {
         "id":11,
-        "nome":"Vasilha de aluminio",
+        
         "descricao":"Diametro: 23cm, Material: Aluminio",
         "preco":20.90,
-        "imagem":"https://images-americanas.b2w.io/produtos/5049368164/imagens/comedouro-vasilha-pet-racao-agua-inox-caes-gato-2x1250ml/5049368164_1_large.jpg" 
+        "imagem":"https://images-americanas.b2w.io/produtos/5049368164/imagens/comedouro-vasilha-pet-racao-agua-inox-caes-gato-2x1250ml/5049368164_1_large.jpg" ,
+    "nome":"Vasilha de aluminio"
     },
     {
         "id":12,
-        "nome":"Comedouro elevado",
+       
         "descricao":"Diametro: 23cm, Material: Aluminio e MDF ",
         "preco":64.99,
-        "imagem":"https://artfactory.cdn.magazord.com.br/img/2024/07/produto/4546/comedouro-elevado-para-pet-duplo-com-2-tigelas-industrial-carvalho-e-preto-2-web.jpg?ims=600x600" 
+        "imagem":"https://artfactory.cdn.magazord.com.br/img/2024/07/produto/4546/comedouro-elevado-para-pet-duplo-com-2-tigelas-industrial-carvalho-e-preto-2-web.jpg?ims=600x600" ,
+     "nome":"Comedouro elevado"
     },
     {
         "id":13,
-        "nome":"Comedouro de sapo",
+        
         "descricao":"Diametro: 23cm, Material: Aluminio e plastico",
         "preco":41.99,
-        "imagem":"https://m.media-amazon.com/images/I/61pxlg7pPYL._AC_UF1000,1000_QL80_.jpg" 
+        "imagem":"https://m.media-amazon.com/images/I/61pxlg7pPYL._AC_UF1000,1000_QL80_.jpg" ,
+"nome":"Comedouro de sapo"
     },
     {
         "id":14,
-        "nome":"Comedouro simples para gatos",
+        
         "descricao":"Diametro: 23cm, Material: Plastico ",
         "preco":10.99,
-        "imagem":"https://http2.mlstatic.com/D_NQ_NP_773540-MLB51120587860_082022-O.webp" 
+        "imagem":"https://http2.mlstatic.com/D_NQ_NP_773540-MLB51120587860_082022-O.webp" ,
+"nome":"Comedouro simples para gatos"
     },
     {
         "id":15,
-        "nome":"Bebedouro chafariz",
+        
         "descricao":"Material: Plastico e aluminio",
         "preco":64.98,
-        "imagem":"https://http2.mlstatic.com/D_NQ_NP_910402-MLB70049060549_062023-O.webp" 
+        "imagem":"https://http2.mlstatic.com/D_NQ_NP_910402-MLB70049060549_062023-O.webp" ,
+"nome":"Bebedouro chafariz"
     },
     {
         "id":16,
-        "nome":"Bebedouro para passaros",
+        
         "descricao":"Cor:Azul, Material: Plastico ",
         "preco":7.90,
-        "imagem":"https://cdn.awsli.com.br/600x700/2485/2485118/produto/217246743/bebedouro-passaros-grande-e0f08b22.jpg" 
+        "imagem":"https://cdn.awsli.com.br/600x700/2485/2485118/produto/217246743/bebedouro-passaros-grande-e0f08b22.jpg" ,
+    "nome":"Bebedouro para passaros"
     },
     {
         "id":17,
-        "nome":"Bebedouro com flores para pasaros",
+        
         "descricao":"Cor: Vermelho, Material: Plastico",
         "preco":10.99,
-        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGYNF5PRvLoeZshPYD-p4ga2_-OKOTzET3EA&s" 
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGYNF5PRvLoeZshPYD-p4ga2_-OKOTzET3EA&s" ,
+"nome":"Bebedouro com flores para pasaros"
     },
     {
         "id":18,
-        "nome":"Kit 3 bebedouros simples para passaros",
+       
         "descricao":"Cor: azul, amarelo e verde, Material: Plastico",
         "preco":25.90,
-        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNcCVXUzPstOjMBVxkMXQ8dZc-dgLKaW8h5Q&s" 
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNcCVXUzPstOjMBVxkMXQ8dZc-dgLKaW8h5Q&s" ,
+ "nome":"Kit 3 bebedouros simples para passaros"
     },
     {
         "id":19,
-        "nome":"Cobertor estampado",
+        
         "descricao":"Cor:Azul",
         "preco":34.99,
-        "imagem":"https://http2.mlstatic.com/D_NQ_NP_877659-MLB75948423432_052024-O.webp" 
+        "imagem":"https://http2.mlstatic.com/D_NQ_NP_877659-MLB75948423432_052024-O.webp" ,
+"nome":"Cobertor estampado"
     },
     {
         "id":20,
-        "nome":"Cobertor liso",
+        
         "descricao":"Cor:Rosa",
         "preco":34.99,
-        "imagem":"https://images-americanas.b2w.io/produtos/5464578775/imagens/manta-cobertor-para-cachorro-pet-soft-quentinha-rosa-bebe/5464578775_1_large.jpg" 
+        "imagem":"https://images-americanas.b2w.io/produtos/5464578775/imagens/manta-cobertor-para-cachorro-pet-soft-quentinha-rosa-bebe/5464578775_1_large.jpg" ,
+    "nome":"Cobertor liso"
     },
     {
         "id":21,
-        "nome":"Cobertor de pizza",
         "descricao":"Estampa: pizza",
         "preco":34.99,
-        "imagem":"https://www.geekmagazine.com.br/wp-content/uploads/2021/06/novo-conforto-animal-de-estimacao-gato-cao-dormir-esteira-gato-macio-quente-flanela.webp" 
+        "imagem":"https://www.geekmagazine.com.br/wp-content/uploads/2021/06/novo-conforto-animal-de-estimacao-gato-cao-dormir-esteira-gato-macio-quente-flanela.webp" ,
+            "nome":"Cobertor de pizza"
+
     },
     {
         "id":22,
-        "nome":"Cobertor liso",
+        
         "descricao":"Cor: Azul",
         "preco":34.99,
-        "imagem":"https://images-americanas.b2w.io/produtos/5464540814/imagens/manta-cobertor-para-cachorro-pet-soft-quentinha-azul-royal/5464540814_1_xlarge.jpg"
+        "imagem":"https://images-americanas.b2w.io/produtos/5464540814/imagens/manta-cobertor-para-cachorro-pet-soft-quentinha-azul-royal/5464540814_1_xlarge.jpg",
+    "nome":"Cobertor liso"
     },
     {
         "id":23,
-        "nome":"Cobertor estampado",
+        
         "descricao":"Cor: Rosa",
         "preco":34.99,
-        "imagem":"https://a-static.mlcdn.com.br/450x450/manta-cobertor-pet-120m-x-150m-microfibra-plush-rosa-blush-meu-pet/lojaestiloeconforto2/40-06-0053-0064/2d6ec285cf23c9afe1fa617ff643365e.jpeg"
+        "imagem":"https://a-static.mlcdn.com.br/450x450/manta-cobertor-pet-120m-x-150m-microfibra-plush-rosa-blush-meu-pet/lojaestiloeconforto2/40-06-0053-0064/2d6ec285cf23c9afe1fa617ff643365e.jpeg",
+    "nome":"Cobertor estampado"
     },
     {
         "id":24,
-        "nome":"Gaiola grande",
+        
         "descricao":"Medidas: 43cm x 35cm x 55cm, 3 Poleiros de plástico",
         "preco":119.99,
-        "imagem":"https://http2.mlstatic.com/D_NQ_NP_846623-MLB70222956967_062023-O.webp"
+        "imagem":"https://http2.mlstatic.com/D_NQ_NP_846623-MLB70222956967_062023-O.webp",
+"nome":"Gaiola grande"
     },
     {
         "id":25,
-        "nome":"Gaiola preta",
+       
         "descricao":"Medidas: 50x48,50x21,70cm, Coxo removíve, Gancho para pendurar",
         "preco":85.90,
-        "imagem":"https://m.media-amazon.com/images/I/71szT2R4uYL._AC_UF1000,1000_QL80_.jpg"
+        "imagem":"https://m.media-amazon.com/images/I/71szT2R4uYL._AC_UF1000,1000_QL80_.jpg",
+ "nome":"Gaiola preta"
     },
     {
         "id":26,
-        "nome":"Gaiola de madeira",
+        
         "descricao":"Material: MDF, Medidas: 38cm x 18cm x 36cm, gancho para pendurar",
         "preco":90.90,
-        "imagem":"https://casaferrari.cdn.magazord.com.br/img/2023/02/produto/42615/gaiola-quadrada-coxo-lateral-ipe-2.jpg?ims=fit-in/600x600/filters:fill(white)"
+        "imagem":"https://casaferrari.cdn.magazord.com.br/img/2023/02/produto/42615/gaiola-quadrada-coxo-lateral-ipe-2.jpg?ims=fit-in/600x600/filters:fill(white)",
+   "nome":"Gaiola de madeira"
     },
     {
         "id":27,

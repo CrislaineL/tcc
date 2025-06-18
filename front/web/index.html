@@ -5,43 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
-    <title>Pet Shop</title>
+    <title>Pet Shop1</title>
 </head>
 
 <body>
 
     <header>
         <h1>𝓟𝓮𝓽 𝓖𝓪𝓽𝓸</h1>
-        <button onclick="window.location.href='cadastrar.html'">Cadastrar</button>
-        <button onclick="window.location.href='login.html'">Login</button>
-        <button onclick="window.location.href='adocao.html'">Adoção</button>
-        <button onclick="window.location.href='consulta.html'">Consulta</button>
-        <button onclick="window.location.href='carrinho.html'">Carrinho</button>
-    
+        
         <li class="search-icon">
                 <input type="search" placeholder="Pesquisa">
                 <label class="icon">
-                    <img src="icon.png" class="iconI" alt="iconI">
+                    
                     <span class="fas fa-search"></span>
                 </label>
             </li>
-
+            
+        <button onclick="window.location.href='pedidos.html'"><img src="pedidos1.png"></button>
+        <button onclick="window.location.href='favorito.html'"><img src="favorito1.png"></button>
+        <button onclick="window.location.href='carrinho.html'"><img src="carrinho.png"></button>
+        <button onclick="window.location.href='login.html'">Login/Cadastrar</button>
     </header>
+
+<br><br><br><br><br>
+    <div class="class Containerheader">
+        <button onclick="window.location.href='cadastrar.html'">Cadastrar</button>
+        <button onclick="window.location.href='adocao.html'">Adoção</button>
+        <button onclick="window.location.href='consulta.html'">Consulta</button>
+        <button onclick="window.location.href='suportepet.html'">Suporte para pais de pet</button>
+        <button onclick="window.location.href='personal.html'">Personal Slitter</button>
+        <button onclick="window.location.href='aculpuntura.html'">Aculpuntura</button>
+        <button onclick="window.location.href='blog.html'">Blog</button>
+        <button onclick="window.location.href='doacoes.html'">Doações</button>
+
+    </div>
+
+     <div class="banner">
+        <h5 class="banner-text active">Compras acima de R$100,00 ganham um brinde</h5>
+        <h5 class="banner-text">Frete fixo de R$10.00 reais para todo o Brasil</h5>
+    </div>
     
 <div class="carousel" aria-label="Galeria de imagens de Petshop"><br>
        
-        <img src="img1.jpg" alt="petgato" class="active" />
-        <img src="img2.jpg" alt="petshop" />
-        <img src="img3.jpg" alt="cachorro" />
+        <img src="img11.png" alt="petgato" class="active" />
+        <img src="img2.png" alt="petshop" />
+        <img src="img3.png" alt="cachorro" />
         
         <button class="prev" aria-label="Imagem anterior">&#10094;</button>
         <button class="next" aria-label="Próxima imagem">&#10095;</button><br><br>
 
-    <br></div>
-
+    </div>
+<div class="animal">
     <br>
+    <button onclick="window.location.href='pedidos.html'"><img src="dog.png"></button>
+    <button onclick="window.location.href='favorito.html'"><img src="cat.png"></button>
+    <button onclick="window.location.href='pedidos.html'"><img src="fish.png"></button>
+    <button onclick="window.location.href='favorito.html'"><img src="passaro.png"></button>
     <br>
 
+    
+</div><br><br>
+
+<div class="frete">
+   <img src="frete.png"> 
+</div>
+<br><br><br>
     <main class="mainContainer">
         <div id="produtos-container">
             <div id="detalhes" class="modal oculto">
@@ -59,6 +87,69 @@
     </main>
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Tooltip -->
+<div class="tooltip">Precisa de ajuda?</div>
+
+<!-- Botão abrir -->
+<button class="toggle-button" id="open-button">
+  <i class="fab fa-whatsapp"></i>
+</button>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-header">
+    <div>Iniciar uma conversa</div>
+    <button class="close-btn" id="close-button">&times;</button>
+  </div>
+  <div class="popup-body">
+    <p>Olá! Escolha alguém do nosso time para conversar pelo WhatsApp ;)</p>
+
+     <div class="contact" onclick="window.open('https://wa.me/19987735021','_blank')">
+     <img src="./file negueba.jpg" alt="Rebeca PetGato">
+
+      <div class="contact-info">
+        <strong>Rebeca PetGato</strong>
+        <span>Adoção/Atendimento</span>
+      </div>
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div class="contact" onclick="window.open('https://wa.me/19995601381','_blank')">
+      <img src="cricri.jpg" alt="Cris PetGato">
+      <div class="contact-info">
+        <strong>Cris PetGato</strong>
+        <span>Financeiro/Creche</span>
+      </div>
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
+      <img src="larissa.jpeg" alt="Larissa PetGato">
+      <div class="contact-info">
+        <strong>Larissa PetGato</strong>
+        <span>Atendimento/Veterinaria</span>
+      </div>
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+     <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
+      <img src="ls.jpg" alt="Larissa Santos PetGato">
+      <div class="contact-info">
+        <strong>Larissa Santos PetGato</strong>
+        <span>Suporte Técnico/Financeiro</span>
+      </div>
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+     <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
+      <img src="./ivete.jpg" alt="Evelyn PetGato">
+      <div class="contact-info">
+        <strong>Evelyn PetGato</strong>
+        <span>Creche/Suporte</span>
+      </div>
+      <i class="fab fa-whatsapp"></i>
+    </div>
 
 
 </body>

@@ -67,3 +67,68 @@ function adicionarCarrinho() {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     fecharModal();
 }
+
+const imgs = document.querySelectorAll('.carousel img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let index = 0;
+let autoSlide;
+
+function showImage(i) {
+    index = (i + imgs.length) % imgs.length;
+    imgs.forEach((img, idx) => {
+        if (idx === index) {
+            img.classList.add('active');
+        } else {
+            img.classList.remove('active');
+        }
+    });
+}
+
+function next() {
+    showImage(index + 1);
+}
+
+function prev() {
+    showImage(index - 1);
+}
+
+function resetAuto() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(next, 4000);
+}
+
+autoSlide = setInterval(next, 4000);
+nextBtn.onclick = () => {
+    next();
+    resetAuto();
+};
+prevBtn.onclick = () => {
+    prev();
+    resetAuto();
+};
+const texts = document.querySelectorAll('.banner-text');
+        let currentIndex = 0;
+        function changeText() {
+            // Remove a classe 'active' de todos os textos
+            texts.forEach((text, index) => {
+                text.classList.remove('active');
+                text.style.color = '#333'; // Reset color
+            });
+            // Muda a cor do texto ativo
+            texts[currentIndex].classList.add('active');
+            texts[currentIndex].style.color = getRandomColor();
+            // Atualiza o índice para o próximo texto
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        // Inicia o carousel
+        changeText(); // Mostra o primeiro texto
+        setInterval(changeText, 3000);
