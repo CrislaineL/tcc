@@ -18,9 +18,11 @@ function mostrarProdutos(produtos) {
     produtos.forEach((produto, index) => {
         const card = `
             <div class="card">
+            <img src="${produto.imagem}" alt="${produto.nome}">
                 <h2>${produto.nome}</h2>
-                <img src="${produto.imagem}" alt="${produto.nome}">
                 <p>R$ ${produto.preco.toFixed(2)}</p>
+                <button class="botao1" onclick="mostrarDetalhes(${index})"><img src="favorito1.png" ></button>
+                <button class="botao1" onclick="mostrarDetalhes(${index})"><img src="carrinho.png"></button>
                 <button onclick="mostrarDetalhes(${index})">Detalhes</button>
             </div>
         `;

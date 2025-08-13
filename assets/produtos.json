@@ -9,11 +9,11 @@
     },
     {
         "id":2,
-        
+         "nome":"Cama de melancia",
         "descricao":"Medidas: 55cm x 43cm",
         "preco":60.00,
-        "imagem":"https://a-static.mlcdn.com.br/800x560/cama-caminha-cachorro-pet-melancia-tamanho-m-65x53cm-emporium-distripet/petletstore/13576267046/7a0f5b621c6c3471fed62b3ab46c6b59.jpg",
-    "nome":"Cama de melancia"
+        "imagem":"https://a-static.mlcdn.com.br/800x560/cama-caminha-cachorro-pet-melancia-tamanho-m-65x53cm-emporium-distripet/petletstore/13576267046/7a0f5b621c6c3471fed62b3ab46c6b59.jpg"
+   
     },
     {
         "id":3,
