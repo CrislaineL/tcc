@@ -115,7 +115,7 @@ const texts = document.querySelectorAll('.banner-text');
             // Remove a classe 'active' de todos os textos
             texts.forEach((text, index) => {
                 text.classList.remove('active');
-                text.style.color = '#333'; // Reset color
+                text.style.color = '#f7f7f7ff'; // Reset color
             });
             // Muda a cor do texto ativo
             texts[currentIndex].classList.add('active');
@@ -134,3 +134,20 @@ const texts = document.querySelectorAll('.banner-text');
         // Inicia o carousel
         changeText(); // Mostra o primeiro texto
         setInterval(changeText, 3000);
+
+const banner = document.querySelector(".banner");
+const text = document.querySelectorAll(".banner-text");
+let  = 0;
+
+function showNextText() {
+    texts[index].classList.add("active");             // mostra o texto atual
+
+    // muda a cor da banner conforme o texto
+    if(index === 0) banner.style.backgroundColor = "#81cbeef6";
+    if(index === 1) banner.style.backgroundColor = "#0303fffb";
+    if(index === 2) banner.style.backgroundColor = "#eeff00ff";
+
+    index = (index + 1) % texts.length; // passa para o próximo
+}
+
+setInterval(showNextText, 3000); // troca a cada 3 segundos

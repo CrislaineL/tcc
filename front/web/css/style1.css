@@ -1,563 +1,230 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* Corpo da pagina*/
-
+/*CORES DO SITE*/
+:root {
+  --font-family: 'CircularXX', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --c1: linear-gradient(to right, rgb(180, 227, 241), rgb(75, 197, 235));
+  --c2: rgb(180, 227, 241);
+  --c3: rgb(75, 197, 235);
+  --c4: rgba(197, 218, 226, 0.623);
+  --c5: rgb(136, 132, 132);/*COR DO TEXTO DOS BOTÕES*/
+}
+/* CORPO DA PAGINA */
 body {
-  width: 100%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin: 0;
-    padding:0;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;/*ESCONDE A ROLAGEM LATERAL*/
+  display: flex;
+  flex-direction: column;/*ORGANIZA OS ELEMENTOS EM COLUNAS*/
+  align-items: center;/*CENTRALIZA OS ELEMENTOS NA PÁGINA*/
 }
-
-/*Cabeçalho*/
-
+/*CABEÇALHO UM*/
 header {
-    background: linear-gradient(to right, rgb(180, 227, 241), rgb(75, 197, 235));
-    color: black;
-    width: 100vh;
-    height: 15vh;
-    display: flex;
-     position: fixed; /* Fixa o header em relação à janela do navegador */
-  top: 0;          /* Posiciona no topo da página */
-  left: 0;         /* Alinha à esquerda da janela */
-  width: 100%;     /* Ocupa toda a largura da tela */
-  z-index: 1000;   /* Garante que fique acima de outros elementos */
-    
-    align-items: center;
-    justify-content:space-around;
-    
+  background: var(--c1);
+  color: black;
+  width: 100%;
+  height: 85px;
+  display: flex;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;/*MANTÉM O CABEÇALHO ACIMA DOS OUTROS ITEM DO SITE*/
+  justify-content: space-around;/*DISTRIBUI OS ITENS DO CABEÇALHO*/
+  align-items:center;/*ALINHA OS ITENS DO CABEÇALHO*/
 
-    & img{
-        width:55px;
-    }
+}
+header h1 {
+  font-family: 'Brush Script MT', cursive;
+  color: rgb(6, 43, 255);
+  font-size: 36.5px;/*TAMANHO DO TEXTO*/
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 0px;left: 8%;/*POSIÇÃO DO TEXTO*/
+  cursor: pointer;/*AO PASSAR O MOUSE EMCIMA DO TEXTO, VAI APARECER UMA MÃOZINHA*/
 
-    & h1{
-    font-size: 45px;
+  & img {
+    width: 25px;
+  }
+}
+header img{
+  width: 37px;/*TAMANHO DAS IMAGENS*/
+  border: none;
+}
+header button {
+  background-color: transparent;
+  border: none;
+  color: black;/*COR DO TEXTO*/
+  font-weight: bold;/*TEXTO EM NEGRITO*/
+  cursor: pointer;/*AO PASSAR O MOUSE EMCIMA DOS BOTÕES, VAI APARECER UMA MÃOZINHA*/
+}
+header button:hover {
+  color: white;/*COR DO TEXTO AO PASSAR O MOUSE EM CIMA*/
+  transition: 0.3s;/*TEMPO DA TRANSIÇÃO*/
+  font-size: 1.8vh;
 }
 
-& button{
-        background-color: transparent;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        color: rgb(0, 0, 0);
-    }
-     & button:hover{
-        background-color:rgb(161, 200, 250);
-        color: rgb(0, 0, 0);
-        width:auto;
-        height: 10vh;
-    }
-   
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DO TITULO */
+@media (max-width: 768px) {
+  header h1 {
+    width: 60%;
+   font-size: 30px;
+  }
 }
 
-/*2º parte do cabeçalho*/
-
- .Containerheader{
-    background-color: rgba(231, 227, 227, 0.678);
-    color: black;
-    width: 100%;
-    height:6vh;
-
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    
-& button{
-        background-color: transparent;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        color: rgb(0, 0, 0);
-    }
-     & button:hover{
-        background-color:rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-    }
-   
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DAS IMAGENS */
+@media (max-width: 768px) {
+  header button img {
+    width: 25px; /* diminui o tamanho das imagens */
+  }
 }
- 
-/*Barra de Pesquisa*/
 
+/*BARRA DE PESQUISA*/
 .search-icon {
-    height: 40px;
-    width: 540px;
-    display: flex;
-    background:  rgba(212, 226, 255, 0.753) ;
-    border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: none;
+  border-radius: 55px;
+}
+.search-icon input {
+  background: var(--c2);
+  border: none;
+  padding: 14px;
+  width: 40%;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 55px;
+  transition: width 0.4s ease-in-out;/*ANIMAÇÃO DE ABRIR A BARRA DE PESQUISA*/
+}
+.search-icon input:focus {
+  width: 80%;/*TAMANHO DA BARRA DE PESQUISA AO CLICAR*/
+  outline: none;/*REMOVE A BORDA AZUL QUE APARECE AO CLICAR NA BARRA DE PESQUISA*/
 }
 
-.search-icon input{
-    background-color: rgb(219, 250, 250);
-    height: 100%;
-    width: 800px;
-    border: none;
-    outline: none;
-    padding: 0 10px;
-    color: #000000;
-    font-size: 16px;
-    border-radius: 55px 55px 55px 55px;
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .search-icon {
+    display: none; /* some completamente */
+  }
+}
+/* CONTAINER DOIS */
+.Containerheader {
+  background-color: var(--c4);
+  position: relative;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
 }
 
-.search-icon .icon{
-    height: 100%;
-    width: 100px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px ;
-    border-radius:  0;
-    cursor: pointer;
-}
-.iconI {
-    width: 40%;
-    margin: -6px;
-    height: auto;
-    align-items:center;
-    justify-items: center;
-
+.Containerheader button {
+  width: 130px;
+  border: none; 
+  border-radius: 5px; 
+  padding: 8px; 
+  color: var(--c5); 
+  background: transparent; 
+  cursor: pointer; 
+  display: flex; /* PARA ALINHAR A IMG E O TEXTO */
+  align-items: center; 
+  justify-content: center; 
+  gap: 6;/* ESPAÇO ENTRE TEXTO E IMG */
 }
 
-.search-icon .icon:hover{
-    background: rgb(251, 254, 255);
+/* As imagens (ícones/gifs) ficam ocultas por padrão */
+.Containerheader button img {
+  display: none; /* some em todas as telas inicialmente */
 }
 
-.search-icon .icon span{
-    color: rgb(247, 247, 247);
-    font-size: 18px;
+/* Quando passar o mouse (somente em dispositivos que suportam hover), exibe a imagem */
+@media (hover: hover) and (pointer: fine) {
+  .Containerheader button:hover img {
+    display: inline-block; /* mostra a imagem ao passar o mouse */
+  }
 }
 
-li.btn{
-    font-size: 29px;
-    flex: 1;
-    padding: 0 40px;
-    display: none;
+/* Em telas pequenas (responsivo, tipo celular), as imagens continuam ocultas */
+@media (max-width: 768px) {
+  .Containerheader button img {
+    display: none !important; /* garante que no mobile nunca aparece */
+  }
 }
-
-li.btn span{
-    height: 42px;
-    width: 42px;
-    text-align: center;
-    line-height: 42px;
-    border: 1px solid #151515;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-li.btn span.show:before{
-    content:'\f00d';
-}
-
-/*Banner promocional*/
-
+/*BANNER*/
 .banner {
-            position: relative;
-            width: 90%;
-            background-color: #f1ff29; 
-            padding: 10px 0;
-            border-radius: 15px;
-            margin:4vh;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            overflow: hidden;
-        }
-        .banner-text {
-            display: none; /* Esconde todos os textos inicialmente */
-            color: #000000; /* Cor do texto */
-            transition: color 0.5s ease; /* Transição suave para a cor */
-        }
-        .banner-text.active {
-            display: block; /* Mostra o texto ativo */
-        }
-
-/* Carousel */
-
-
-  .carousel {
- 
-   
-    width: 95%;
-    background-color: transparent; 
-    height: 500px; 
-    position: relative;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 60%;
+  top: 70px;left: 0;
+  padding: 15px;
+  border-radius: 75px 75px 85px 75px;
+  text-align: center;
+  font-weight: bold;/*TEXTO EM NEGRITO*/
+  overflow: hidden;
+  margin: 4vh;
   
-  .carousel img {
-    width:100%;
-    height: 80%;
-    object-fit: cover; 
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 50%; /* Mover para o centro horizontalmente */
-    transform: translateX(-50%); /* Centraliza a imagem */
-    transition: opacity 1s ease-in-out;
-    border-radius: 50px;
-    pointer-events: none; 
-  }
+}
+.banner-text {
+  display: none;/*ESCONDE O TEXTO*/
+  color: black;
+  transition: color o.5s ease;/*FAZ A TRANSIÇÃO DO TEXTO*/
+}
+.banner-text.active {
+  display: block;/*MOSTRA O TEXTO*/
+}
+/*CAROUSEL DE IMAGENS*/
+.carousel {
+  position: relative;
+  top: 70px;left: 0;
+  width: 60%;
+  height: 300%;
+  overflow: hidden;
+  
+}
 
-  /* Imagem ativa */
-  .carousel img.active {
-    opacity: 1;
-    position: relative;
-    pointer-events: auto; 
-  }
-  /* Botões nas laterais */
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgb(185, 204, 223);
-    color: var(--c1);
-    border: none;
-    padding: 12px 18px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 24px;
-    user-select: none;
-    z-index: 10;
-  }
-  .prev { left: 15px; }
-  .next { right: 15px; }
+.carousel img {
+  width: 100%;
+  height: 104%;
+  opacity: 0;
+  position: absolute;
+  top: -8%; left: 50%;
+  transform: translateX(-50%);/*IMAGEM OCULTA E CENTRALIZADA*/
+  transition: opacity 0.5s ease-in-out;/*ANIMAÇÃO DE TRANSIÇÃO DAS IMAGENS*/
+
+}
+.carousel img.active {
+  opacity: 1;/*IMAGEM VISIVEL*/
+  position: relative;
+  pointer-events: auto;/*PERMITE CLICAR NA IMAGEM*/
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(39, 226, 32);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  user-select: none;/*IMPEDIR QUE O TEXTO SEJA SELECIONADO AO CLICAR NOS BOTÕES*/
+  z-index: 10;/*MANTÉM OS BOTÕES ACIMA DAS IMAGENS*/
+}
 
 @keyframes fadeInDown {
-from {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-h2{
-    color: rgb(0, 0, 0);
-    margin-top: 40px;
-    margin-bottom: 2vw;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-.animal {
-    text-align: center;
-    
-  }
-  .animal button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-  .animal img {
-    width: 150px;
-    height: auto;
-  }
-
-  .frete {
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-
-    & img{
-        width:78%;
-        height: 270px;
-        border-radius: 45px;
-
-    }
-  }
- 
-.mainContainer{
-  background-color: #25D366;
-    width: 1470px;
-    top:45px;left: 21px;
-    position: relative;
-
-
-#produtos-container{
-    width: 100%;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-
-:root{
-    --t1:rgba(80, 34, 74, 0.3);
-    --t2:rgba(0,0,0,0.7);
-}
-
-
-.card{
-    margin:12vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to right, rgb(180, 227, 241), rgb(75, 197, 235));
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    gap: 10px;
-    color: rgb(255, 255, 255);
-   
-
-    & img {
-        width: 300px;
-        height: 250px;
-    }
-    & button{
-        background-color: rgb(0, 0, 0);
-        border: none;
-        padding: 15px 70px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        color:white;
-    }
-
-    
-    .botao1{
-        background-color:transparent;
-        border: none;
-        padding:1px;
-        border-radius: 5px;
-        font-weight: bold;
-        color:white;
-
-       
-  & img{
-    width: 35px;
-    height: 35px;
-  }
-    }
-}
-}
-.modal{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--t2);
-}
-
-.janela{
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    box-shadow: 0 0 5px var(--t1);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: auto;
-
-    & div{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    & button{
-        background-color: black;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        color: #fff;
-    }
-
-    & form{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-input{
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-}
-
-.oculto{
-    display: none;
-}
-
-@media screen and ( max-width: 770px){
-   .janela {
-    min-width: 90%;
+  from { 
+    opacity: 0;/*INICIA COM OPACIDADE 0*/
+    transform: translateY(-20px);/*INICIA 20PX ACIMA*/
+   }
+  to { 
+    opacity: 1;/*FINALIZA COM OPACIDADE 1*/
+    transform: translateY(0);/*FINALIZA NA POSIÇÃO ORIGINAL*/
    }
 }
-
-#conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-    align-items: center;
-    padding: 20px; 
-    max-width: 300px; 
-}
-
-#conteudo img {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 5px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-#conteudo h3 {
-    margin: 0; 
-}
-
-#conteudo p {
-    margin: 5px 0; 
-}
-  
-/* Tooltip */
-    .tooltip {
-      position: fixed;
-      bottom: 20px;
-      right: 90px;
-      background-color: #f1f3f5;
-      padding: 8px 12px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      font-size: 14px;
-      color: #333;
-    }
-
-    /* Botão abrir */
-    .toggle-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      border: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      z-index: 1000;
-    }
-
-    /* Popup */
-    .popup {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 320px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      display: none;
-      z-index: 1000;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.3s ease;
-    }
-
-    .popup.show {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .popup-header {
-      background-color: #25D366;
-      color: white;
-      padding: 16px;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .popup-header .close-btn {
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    .popup-body {
-      padding: 16px;
-    }
-
-    .popup-body p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      display: flex;
-      align-items: center;
-      background-color: #f8f8f8;
-      padding: 10px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      margin-bottom: 10px;
-    }
-
-    .contact:hover {
-      background-color: #e6e6e6;
-    }
-
-    .contact img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .contact-info {
-      flex-grow: 1;
-    }
-
-    .contact-info strong {
-      display: block;
-      color: #333;
-    }
-
-    .contact-info span {
-      font-size: 12px;
-      color: #888;
-    }
-
-    .contact i {
-      color: #25D366;
-      font-size: 20px;
-    }

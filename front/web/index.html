@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style1.css">
-    <title>Pet Shop1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style1.css">
+  <title>Pet Gatô: o melhor petshop online, em todos os aspectos</title>
+  <link rel="icon" href="../web/images/icon.jpg" type="image/x-icon">
 </head>
-
 <body>
-
-    <header>
-        <h1>𝓟𝓮𝓽 𝓖𝓪𝓽𝓸</h1>
-        
-        <li class="search-icon">
+  <!--Cabeçalho-->
+  <header>
+    <h1>𝓟𝓮𝓽 𝓖𝓪𝓽𝓸 </h1>
+  <!--Barra de pesquisa-->
+      <li class="search-icon">
                 <input type="search" placeholder="Pesquisa">
                 <label class="icon">
                     
                     <span class="fas fa-search"></span>
                 </label>
             </li>
-            
-        <button onclick="window.location.href='pedidos.html'"><img src="pedidos1.png"></button>
-        <button onclick="window.location.href='favorito.html'"><img src="favorito1.png"></button>
-        <button onclick="window.location.href='carrinho.html'"><img src="carrinho.png"></button>
-        <button onclick="window.location.href='login.html'">Login/Cadastrar</button>
-    </header>
+  <!--Botões do cabeçalho-->
+     <button onclick="window.location.href='pedidos.html'"><img src="../web/images/caixa-de-coracao.png"></button>
+     <button onclick="window.location.href='favorito.html'"><img src="../web/images/favorito.png"></button>
+     <button onclick="window.location.href='carrinho.html'"><img src="../web/images/adicionar-ao-carrinho.png"></button>
+     <button onclick="window.location.href='login.html'"><img src="../web/images/pessoa.png"></button>
+  </header>
 
-    
-<br><br>
-<br><br><br><br><br>
-    <div class="class Containerheader">
-        <button onclick="window.location.href='adocao.html'">Adoção</button>
-        <button onclick="window.location.href='consulta.html'">Consulta</button>
-        <button onclick="window.location.href='aculpuntura.html'">Aculpuntura</button>
-        <button onclick="window.location.href='blog.html'">Blog</button>
-        <button onclick="window.location.href='doacoes.html'">Doações</button>
-
-    </div>
-
-     <div class="banner">
-        <h5 class="banner-text active">Compras acima de R$100,00 ganham um brinde</h5>
-        <h5 class="banner-text">Frete fixo de R$10.00 reais para todo o Brasil</h5>
-    </div>
-    
+  <!--Segundo cabeçalho-->
+  <div class="class Containerheader">
+    <button onclick="window.location.href='consulta.html'"><img src="../web/images/veterinario.gif" alt="Ícone animado" width="40" height="40">Consulta</button>
+    <button onclick="window.location.href='aculpuntura.html'"><img src="../web/images/cabeca.png" alt="Ícone animado" width="40" height="40">Aculpuntura</button>
+    <button onclick="window.location.href='blog.html'"><img src="../web/images/noticias.gif" alt="Ícone animado" width="40" height="40">Blog</button>
+    <button onclick="window.location.href='adocao.html'"><img src="../web/images/salve-os-animais.gif" alt="Ícone animado" width="40" height="40">Adoção</button>
+    <button onclick="window.location.href='doacoes.html'"><img src="../web/images/doacao.gif" alt="Ícone animado" width="40" height="40">Doações</button>
+  </div>
+  <!--Banner pequeno-->
+  <div class="banner">
+    <h5 class="banner-text">Frete fixo de R$10.00 reais para todo o Brasil</h5>
+    <h5 class="banner-text active">Compras acima de R$100,00 ganham um brinde</h5>
+  </div>
+  <!--Carousel de imagens-->
+      
 <div class="carousel" aria-label="Galeria de imagens de Petshop"><br>
        
-        <img src="img11.png" alt="petgato" class="active" />
-        <img src="img2.png" alt="petshop" />
-        <img src="img3.png" alt="cachorro" />
-        
+        <img src="racao.gif" alt="petgato" class="active" />
+        <img src="petisco.gif" alt="petshop" />
+        <img src="tosa.gif" alt="cachorro" />
         <button class="prev" aria-label="Imagem anterior">&#10094;</button>
         <button class="next" aria-label="Próxima imagem">&#10095;</button><br><br>
-
     </div>
+  <!--Botões de animais-->
+      <br><br><br><br><br><br>
 <div class="animal">
     <br>
     <button onclick="window.location.href='pedidos.html'"><img src="dog.png"></button>
@@ -61,29 +58,9 @@
     <button onclick="window.location.href='pedidos.html'"><img src="fish.png"></button>
     <button onclick="window.location.href='favorito.html'"><img src="passaro.png"></button>
     <br>
-
-    
 </div><br><br>
-
-<div class="frete">
-   <img src="frete.png"> 
-</div>
-<br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <main class="mainContainer">
+  <!--Produtos-->
+  <main class="mainContainer">
         <div id="produtos-container">
             <div id="detalhes" class="modal oculto">
                 <div class="janela">
@@ -98,21 +75,8 @@
         </div>
 
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!--Icone de whatsapp-->
+  <br><br><br>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Tooltip -->
 <div class="tooltip">Precisa de ajuda?</div>
@@ -125,60 +89,19 @@
 <!-- Popup -->
 <div class="popup" id="popup">
   <div class="popup-header">
-    <div>Iniciar uma conversa</div>
+    <div>Inicie uma conversa com nosso adminstrativo para tirar alguma dúvida!</div>
     <button class="close-btn" id="close-button">&times;</button>
   </div>
   <div class="popup-body">
-    <p>Olá! Escolha alguém do nosso time para conversar pelo WhatsApp ;)</p>
-
-     <div class="contact" onclick="window.open('https://wa.me/19987735021','_blank')">
-     <img src="./file negueba.jpg" alt="Rebeca PetGato">
-
-      <div class="contact-info">
-        <strong>Rebeca PetGato</strong>
-        <span>Adoção/Atendimento</span>
-      </div>
-      <i class="fab fa-whatsapp"></i>
-    </div>
-
     <div class="contact" onclick="window.open('https://wa.me/19995601381','_blank')">
-      <img src="cricri.jpg" alt="Cris PetGato">
+      <img src="cricri.jpg" alt="Pet Gatô">
       <div class="contact-info">
-        <strong>Cris PetGato</strong>
-        <span>Financeiro/Creche</span>
+        <strong>Pet Gatô</strong>
+        <span>Pet Gatô</span>
       </div>
       <i class="fab fa-whatsapp"></i>
     </div>
-
-    <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
-      <img src="larissa.jpeg" alt="Larissa PetGato">
-      <div class="contact-info">
-        <strong>Larissa PetGato</strong>
-        <span>Atendimento/Veterinaria</span>
-      </div>
-      <i class="fab fa-whatsapp"></i>
-    </div>
-
-     <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
-      <img src="ls.jpg" alt="Larissa Santos PetGato">
-      <div class="contact-info">
-        <strong>Larissa Santos PetGato</strong>
-        <span>Suporte Técnico/Financeiro</span>
-      </div>
-      <i class="fab fa-whatsapp"></i>
-    </div>
-
-     <div class="contact" onclick="window.open('https://wa.me/19987106708','_blank')">
-      <img src="./ivete.jpg" alt="Evelyn PetGato">
-      <div class="contact-info">
-        <strong>Evelyn PetGato</strong>
-        <span>Creche/Suporte</span>
-      </div>
-      <i class="fab fa-whatsapp"></i>
-    </div>
-
 
 </body>
 <script src="./JS/js3.js"></script>
-
 </html>
