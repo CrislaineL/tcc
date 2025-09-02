@@ -70,45 +70,89 @@ function adicionarCarrinho() {
     fecharModal();
 }
 
+
+// Seleciona imagens e botões do carousel
 const imgs = document.querySelectorAll('.carousel img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-let index = 0;
-let autoSlide;
+const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-function showImage(i) {
-    index = (i + imgs.length) % imgs.length;
-    imgs.forEach((img, idx) => {
-        if (idx === index) {
-            img.classList.add('active');
+let index = 0; // índice da imagem central
+let autoSlide; // autoplay
+
+// Cria as bolinhas de acordo com a quantidade de imagens
+imgs.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active-dot'); // primeira bolinha ativa
+    dot.addEventListener('click', () => {
+        index = i;
+        updateCarousel();
+        resetAuto();
+    });
+    indicatorsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+// Atualiza classes das imagens e bolinhas
+function updateCarousel() {
+    imgs.forEach((img, i) => {
+        img.classList.remove('active', 'left', 'right', 'hidden');
+
+        if (i === index) {
+            img.classList.add('active'); // central
+        } else if (i === (index - 1 + imgs.length) % imgs.length) {
+            img.classList.add('left'); // esquerda
+        } else if (i === (index + 1) % imgs.length) {
+            img.classList.add('right'); // direita
         } else {
-            img.classList.remove('active');
+            img.classList.add('hidden'); // fora do foco
         }
+    });
+
+    // Atualiza bolinhas
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active-dot', i === index);
     });
 }
 
+// Próxima imagem
 function next() {
-    showImage(index + 1);
+    index = (index + 1) % imgs.length;
+    updateCarousel();
 }
 
+// Imagem anterior
 function prev() {
-    showImage(index - 1);
+    index = (index - 1 + imgs.length) % imgs.length;
+    updateCarousel();
 }
 
+// Reinicia autoplay
 function resetAuto() {
     clearInterval(autoSlide);
     autoSlide = setInterval(next, 4000);
 }
 
-autoSlide = setInterval(next, 4000);
-nextBtn.onclick = () => {
+// Eventos dos botões
+nextBtn.addEventListener('click', () => {
     next();
     resetAuto();
-};
-prevBtn.onclick = () => {
+});
+prevBtn.addEventListener('click', () => {
     prev();
     resetAuto();
-};
+});
+
+// Inicia autoplay
+autoSlide = setInterval(next, 4000);
+
+// Inicializa carousel
+updateCarousel();
+
+
+
 const texts = document.querySelectorAll('.banner-text');
         let currentIndex = 0;
         function changeText() {
@@ -143,7 +187,7 @@ function showNextText() {
     texts[index].classList.add("active");             // mostra o texto atual
 
     // muda a cor da banner conforme o texto
-    if(index === 0) banner.style.backgroundColor = "#81cbeef6";
+    if(index === 0) banner.style.backgroundColor = "#00a6f3f6";
     if(index === 1) banner.style.backgroundColor = "#0303fffb";
     if(index === 2) banner.style.backgroundColor = "#eeff00ff";
 

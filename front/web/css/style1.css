@@ -6,7 +6,7 @@
 /*CORES DO SITE*/
 :root {
   --font-family: 'CircularXX', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --c1: linear-gradient(to right, rgb(180, 227, 241), rgb(75, 197, 235));
+  --c1: linear-gradient(to right,  rgb(180, 227, 241),  rgb(75, 197, 235));
   --c2: rgb(180, 227, 241);
   --c3: rgb(75, 197, 235);
   --c4: rgba(197, 218, 226, 0.623);
@@ -157,11 +157,48 @@ header button:hover {
     display: none !important; /* garante que no mobile nunca aparece */
   }
 }
+
+/*Anúncios buttons*/
+.anuncios {
+  width: 70%;
+  height: 12.6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    display: flex; /* PARA ALINHAR A IMG E O TEXTO */
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 11px;/* ESPAÇO ENTRE TEXTO E IMG */
+    padding: 3%;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    top: 5px;left: -3%;
+    background-color: rgba(180, 227, 241, 0.452);
+    width: 28%;
+    border-radius: 5px ;
+    height: 100%;
+    border-color: rgba(236, 231, 231, 0.205);
+    align-items: center; 
+    justify-content: center; 
+img{
+  width: 12%;
+  position: relative;
+  top: 0;left: -6%;
+}
+
+  }
+}
+
 /*BANNER*/
 .banner {
   position: relative;
   width: 60%;
-  top: 70px;left: 0;
+  top: 20px;left: 0;
   padding: 15px;
   border-radius: 75px 75px 85px 75px;
   text-align: center;
@@ -178,44 +215,100 @@ header button:hover {
 .banner-text.active {
   display: block;/*MOSTRA O TEXTO*/
 }
+
+
 /*CAROUSEL DE IMAGENS*/
 .carousel {
   position: relative;
-  top: 70px;left: 0;
-  width: 60%;
-  height: 300%;
-  overflow: hidden;
-  
+  top: 10px;left: 0;
+  width: 80%;
+  height: 400px;/*ALTURA DO CAROUSEL AJUSTADA*/
+  overflow: hidden;/*ESCONDE PARTES EXTERNAS DAS IMAGENS*/
+  display: flex;/*PERMITE CENTRALIZAR AS IMAGENS*/
+  justify-content: center;/*CENTRA HORIZONTALMENTE*/
+  align-items: center;/*CENTRA VERTICALMENTE*/
+}
+
+/* ESTILO PADRÃO DAS IMAGENS */
+.carousel img {
+  width: 80%;/*LARGURA PADRÃO DAS IMAGENS*/
+  height: auto;
+  opacity: 0;/*INICIALMENTE OCULTA*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);/*CENTRALIZA NO MEIO DO CAROUSEL*/
+  transition: all 0.6s ease-in-out;/*ANIMAÇÃO SUAVE*/
+  border-radius: 15px;
+  pointer-events: none;/*NÃO CLICÁVEL*/
+}
+
+/* IMAGEM CENTRAL */
+.carousel img.active {
+  opacity: 1;/*IMAGEM VISIVEL*/
+  z-index: 3;/*FICA ACIMA DAS OUTRAS*/
+  transform: translate(-50%, -50%) scale(1);/*CENTRALIZA E AUMENTA LEVEMENTE*/
+  filter: blur(0);/*SEM DESFOQUE*/
+  pointer-events: auto;/*PERMITE CLICAR*/
+}
+
+/* IMAGEM LATERAL ESQUERDA */
+.carousel img.left {
+  opacity: 0.7;/*PARCIALMENTE VISÍVEL*/
+  z-index: 2;
+  transform: translate(-150%, -50%) scale(0.85);/*POSICIONA À ESQUERDA E REDUZ LEVEMENTE*/
+  filter: blur(3px);/*DESFOQUE LEVE*/
+}
+
+/* IMAGEM LATERAL DIREITA */
+.carousel img.right {
+  opacity: 0.7;/*PARCIALMENTE VISÍVEL*/
+  z-index: 2;
+  transform: translate(50%, -50%) scale(0.85);/*POSICIONA À DIREITA E REDUZ LEVEMENTE*/
+  filter: blur(3px);/*DESFOQUE LEVE*/
+}
+
+/* IMAGENS OCULTAS */
+.carousel img.hidden {
+  opacity: 0;/*INVISÍVEL*/
+  z-index: 1;
+  transform: scale(0.5);/*REDUZ LEVEMENTE*/
+  pointer-events: none;/*NÃO CLICÁVEL*/
+}
+.carousel-indicators {
+  display: flex; /* Alinha as bolinhas horizontalmente */
+  gap: 10px; /* Espaçamento entre bolinhas */
+  margin-top: 20px; /* Distância do carousel */
+
+}
+
+.dot {
+  width: 12px; /* Largura da bolinha */
+  height: 12px; /* Altura da bolinha */
+  border-radius: 50%; /* Forma circular */
+  background: rgba(65, 63, 47, 0.5); /* Cor cinza clara */
+  cursor: pointer; /* Cursor de clique */
+      transition: background 0.3s; /* Transição suave ao mudar cor */
+}
+    
+.dot.active-dot {
+  background: rgb(18, 14, 231); /* Bolinha ativa em branco */
+}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+.carousel {
+  width: 90%;/*AJUSTA LARGURA NO MOBILE*/
+  height: 250px;/*ALTURA MENOR*/
 }
 
 .carousel img {
-  width: 100%;
-  height: 104%;
-  opacity: 0;
-  position: absolute;
-  top: -8%; left: 50%;
-  transform: translateX(-50%);/*IMAGEM OCULTA E CENTRALIZADA*/
-  transition: opacity 0.5s ease-in-out;/*ANIMAÇÃO DE TRANSIÇÃO DAS IMAGENS*/
+  width: 90%;/*IMAGEM OCUPA MAIS ESPAÇO*/
+}
 
-}
-.carousel img.active {
-  opacity: 1;/*IMAGEM VISIVEL*/
-  position: relative;
-  pointer-events: auto;/*PERMITE CLICAR NA IMAGEM*/
-}
 .prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgb(39, 226, 32);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  user-select: none;/*IMPEDIR QUE O TEXTO SEJA SELECIONADO AO CLICAR NOS BOTÕES*/
-  z-index: 10;/*MANTÉM OS BOTÕES ACIMA DAS IMAGENS*/
+  font-size: 16px;
+  padding: 8px;
+  }
 }
 
 @keyframes fadeInDown {
@@ -227,4 +320,31 @@ header button:hover {
     opacity: 1;/*FINALIZA COM OPACIDADE 1*/
     transform: translateY(0);/*FINALIZA NA POSIÇÃO ORIGINAL*/
    }
+}
+
+.animal {
+  border: none;
+  width: 70%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button{
+  border: none;
+  background-color: var(--c4);
+  width: 15%;
+  height: 60px;
+  display: flex; /* PARA ALINHAR A IMG E O TEXTO */
+  align-items: center; 
+  justify-content: center; 
+  gap: 6;/* ESPAÇO ENTRE TEXTO E IMG */
+
+    img{
+      width: 30%;
+      height: 50%;
+      border-radius: 80%;
+      
+    }
+  }
 }
