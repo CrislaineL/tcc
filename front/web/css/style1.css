@@ -399,10 +399,13 @@ header button:hover {
 }
 
 .outros, .pet {
-  width: 10%;
+  width: 30%;
+  height: 10%;
   position: relative;
   top: 0;left: -5%;
-  font-size: 25%;
+  font-size: 100%;
+  color: black;
+  font-weight: bold;
 }/* --- wrapper do fundo ondulado --- */
 .section-fundo {
   position: relative;
@@ -416,9 +419,9 @@ header button:hover {
 .fundo-svg {
   position: absolute;
   left: 0;
-  top: -9%;
+  top: -16%;
   width: 200%;
-  height: 110%;
+  height: 150%;
   z-index: 0;                 /* atrás do conteúdo */
   pointer-events: none;       /* deixa os botões clicáveis */
   display: block;
@@ -682,3 +685,122 @@ header button:hover {
   background-color: white; /* Fundo branco */
   box-shadow: 0 0 5px var(--t1); /* Sombra com cor translúcida roxa definida em --t1 */
   padding: 10px; }
+
+  .tosavet{
+    width: 90%;
+    height: 150%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;left: -2%;
+    gap: 3%;
+}
+    .banho, .vet {
+      width: 70%;
+      height: 350px;
+      background-color: rgba(11, 167, 206, 0.438);
+      display: flex;
+      justify-content: space-around;
+      border-radius: 25px;
+      
+      
+
+       & img{
+        width: 50%;
+        border-radius: 70% 0 0 0 ; 
+        position: relative;
+        top: 0;left: 10%; 
+      }
+      & h2{
+        font-size: 15px;
+        color: rgb(233, 224, 142);
+        position: relative;
+        top: 25%;left: 5%;
+      }
+    }
+    /* ========== ESTILOS PARA A SEÇÃO DUPLICADA ========== */
+/* Ajustes mínimos — ficam isolados (sufixados com -dup) para não conflitar */
+.mainContainer-dup {
+  width: 100%;
+  padding: 30px 10%;
+  box-sizing: border-box;
+  color: rgb(80,80,85);
+}
+
+/* grid dos cards */
+.produtos-grid-dup {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* cartão produto */
+.card-dup {
+  background: rgba(205,235,252,0.42);
+  border-radius: 8px;
+  padding: 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  min-height: 220px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.card-dup img { width: 85%; height: 120px; object-fit: cover; border-radius:6px; }
+.card-dup h4 { margin:8px 0 4px; font-size:16px; text-align:center; }
+.card-dup p { font-size:14px; margin:2px 0; text-align:center; }
+
+.button-group-dup {
+  display:flex;
+  gap:8px;
+  margin-top:8px;
+}
+.button-group-dup button {
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+/* modal */
+.modal-dup {
+  position: fixed;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(0,0,0,0.45);
+  z-index: 9999;
+}
+.janela-dup {
+  background:#fff;
+  padding:16px;
+  border-radius:8px;
+  width: min(900px, 95%);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.janela-header-dup { display:flex; justify-content:space-between; align-items:center; }
+.janela-header-dup button { cursor:pointer; }
+
+/* conteúdo e related */
+.conteudo-produto-dup { display:flex; gap:12px; align-items:center; margin-top:14px; }
+.conteudo-produto-dup img { width:140px; height:120px; object-fit:cover; border-radius:6px; }
+.related-products-dup { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+.related-item-dup { width: 130px; border:1px solid rgba(0,0,0,0.06); padding:8px; border-radius:6px; text-align:center; }
+
+/* botão de adicionar */
+.modal-actions-dup { margin-top:12px; display:flex; justify-content:flex-end; }
+
+/* classe pra esconder (usada no seu código original também) */
+.oculto { display: none !important; }
+
+/* responsivo simples */
+@media (max-width:900px) {
+  .produtos-grid-dup { grid-template-columns: repeat(2, 1fr); }
+  .conteudo-produto-dup { flex-direction:column; align-items:flex-start; }
+}
+@media (max-width:480px) {
+  .produtos-grid-dup { grid-template-columns: 1fr; }
+}

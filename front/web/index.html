@@ -57,7 +57,7 @@
   <br /><br /><br /><br /><br />
   <div class="anuncios">
     <br /><br />
-    <button onclick="window.location.href='pedidos.html'">
+    <button onclick="window.location.href='doacoes.html'">
       <img src="../web/images/doacao.gif" alt="Doação" width="40" height="40" />
       <p style="color: black;">
         <b style="color: rgb(75, 197, 235);">Brinquedos que fazem a diferença!</b><br />
@@ -153,7 +153,7 @@
     <button id="btn-next">Próximo</button>
   </div></div>
 </main>
-<br><br><br><br><br><br>
+<br><br><br>
   <!-- Botões de animais -->
    <!-- substitua sua antiga div.fundoparcial por esta estrutura -->
 <section class="section-fundo">
@@ -164,8 +164,8 @@
   </svg>
 <br>
   <!-- aqui vai todo o seu conteúdo existente (copie/cole tudo dentro) -->
-  <div class="fundoparcial-content">
-    <div class="pet"><h1><b style="color: black;">Pets:</b></h1></div>
+  <div class="fundoparcial-content"><br><br><br><br>
+    <div class="pet"><h1><b style="font-size: 35px;">Tudo para Pets:</b></h1></div>
 
     <div class="animal">
       <button onclick="window.location.href='pedidos.html'">
@@ -182,7 +182,7 @@
       </button>
     </div>
 
-    <div class="pet"><h1><b style="color: black;">Outros:</b></h1></div>
+    <div class="pet"><h1><b style="font-size: 35px;">Outros:</b></h1></div>
 
     <div class="animal">
       <button onclick="window.location.href='pedidos.html'">
@@ -215,6 +215,47 @@
     </div>
   </div>
 </section>
+<br><br><br><br><br><br>
+<div class="cb">
+  <h1><b style="font-size: 45px;">Cuidados Básicos:</b></h1><br>
+</div><br><br><br>
+<div class="tosavet"><br>
+  <div class="banho">
+  <h2><b style="font-size: 50px;">Banho<br> & Tosa</b><br><br>
+  Higiene e Conforto para o seu melhor amigo!</h2>
+  <img src="../web/images/banho-tosa-pet-shop.jpg">
+</div><br>
+<div class="vet">
+  <h2><br><br><b style="font-size: 50px;">Veterinário</b><br><br>
+  A saúde de seu pet, a sua prioridade</h2>
+  <img src="../web/images/veterinario.png">
+</div>
+</div>
+<br><br><br><br><br><br>
+<!-- ========== SEÇÃO DUPLICADA DE PRODUTOS (COLE NO FINAL DA PÁGINA) ========== -->
+<main class="mainContainer-dup">
+  <div id="produtos-container-dup" class="produtos-grid-dup"></div>
+
+  <!-- MODAL DE DETALHES -->
+  <div id="detalhes-dup" class="modal-dup oculto">
+    <div class="janela-dup">
+      <div class="janela-header-dup">
+        <h3>Produtos Relacionados</h3>
+        <button id="fechar-detalhes-dup" aria-label="Fechar">X</button>
+      </div>
+
+      <div id="conteudo-dup" class="conteudo-produto-dup"></div>
+
+      <h4 style="margin:10px 0 5px 0">Você também pode gostar:</h4>
+      <div id="related-dup" class="related-products-dup"></div>
+
+      <div class="modal-actions-dup">
+        <button id="adicionarCarrinho-dup"><img src="../web/images/carrinho.png"</button>
+      </div>
+    </div>
+  </div>
+</main>
+
 
   <!-- Ícone de WhatsApp -->
   <div class="tooltip">Precisa de ajuda?</div>
