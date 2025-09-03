@@ -87,19 +87,27 @@ header button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60%;
   border: none;
-  border-radius: 55px;
+  border-radius: 10px;
 }
 .search-icon input {
-  background: var(--c2);
+  background: rgba(253, 249, 249, 0.795);
   border: none;
+  position: relative;
+  top: 0;left:0;
   padding: 14px;
   width: 40%;
   height: 30px;
   font-size: 16px;
-  border-radius: 55px;
+  border-radius: 5px;
   transition: width 0.4s ease-in-out;/*ANIMAÇÃO DE ABRIR A BARRA DE PESQUISA*/
+
+
+}
+.search-icon .icon{
+  position: relative;
+  top: 0;left:2%;
 }
 .search-icon input:focus {
   width: 80%;/*TAMANHO DA BARRA DE PESQUISA AO CLICAR*/
@@ -114,7 +122,7 @@ header button:hover {
 }
 /* CONTAINER DOIS */
 .Containerheader {
-  background-color: var(--c4);
+  background-color: rgba(231, 231, 250, 0.445);
   position: relative;
   top: 85px;
   left: 0;
@@ -167,6 +175,7 @@ header button:hover {
   align-items: center;
 
   button{
+    background: transparent;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
     display: flex; /* PARA ALINHAR A IMG E O TEXTO */
@@ -174,11 +183,11 @@ header button:hover {
     justify-content: space-between; 
     gap: 11px;/* ESPAÇO ENTRE TEXTO E IMG */
     padding: 3%;
+    font-size:60%;
     position: relative;
     display: flex;
     justify-items: center;
     top: 5px;left: -3%;
-    background-color: rgba(180, 227, 241, 0.452);
     width: 28%;
     border-radius: 5px ;
     height: 100%;
@@ -191,6 +200,14 @@ img{
   top: 0;left: -6%;
 }
 
+  }
+}
+
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .anuncios {
+    display: none; /* some completamente */
   }
 }
 
@@ -346,5 +363,86 @@ img{
       border-radius: 80%;
       
     }
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) 
+{
+  .animal img{
+    display: none; /* some completamente */
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) 
+{
+  .animal button{
+    
+  width: 100%;
+  padding: 5px;
+  border-radius: 25%;
+}
+}
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) 
+{
+  .animal {
+    position: relative;
+    top: 0;
+    left: -1%;
+    width: 80%;
+  gap: 2%;
+  padding: 10px;
+}
+}
+.juros {
+  width: 80%;
+  height: 12.6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top:0;left:2%;
+  gap: 2%;
+
+  button{
+    width: 80%;
+    background: transparent;
+    justify-content: space-around;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    display: flex; /* PARA ALINHAR A IMG E O TEXTO */
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 11px;/* ESPAÇO ENTRE TEXTO E IMG */
+    padding: 3%;
+    font-size:60%;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    top: 0;left: -3%;
+    width: 28%;
+    border-radius: 5px ;
+    height: 100%;
+    border-color: rgba(236, 231, 231, 0.205);
+    align-items: center; 
+    justify-content: center; 
+    gap: 10%;
+img{
+  background: transparent;
+  width: 15%;
+  height: 190%;
+  position: relative;
+  top: 0;left: -6%;
+}
+
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .juros img {
+    display: none; /* some completamente */
   }
 }
