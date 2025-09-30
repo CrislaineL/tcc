@@ -24,8 +24,8 @@ function mostrarProdutos(produtos) {
                 <h2>${produto.nome}</h2>
                 <p>R$ ${produto.preco.toFixed(2)}</p>
                 <div class="button-group">
-                    <button class="botao1" onclick="mostrarDetalhes(${index})">
-                        <img src="../web/images/favorito.png" alt="Favorito">
+                    <button class="botao1" onclick="mostrarDetalhes(${index}})">
+                        <img src="../web/images/favorito.png" alt="carrinho.html">
                     </button>
                     <button class="botao1" onclick="mostrarDetalhes(${index})">
                         <img src="../web/images/adicionar-ao-carrinho.png" alt="Adicionar ao carrinho">
