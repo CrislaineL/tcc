@@ -294,7 +294,7 @@ btnNext.addEventListener('click', () => {
         <p><strong>R$ ${Number(p.preco ?? 0).toFixed(2)}</strong></p>
         <div class="button-group-dup">
           <button data-action="ver" data-id="${p.id}">Ver Detalhes</button>
-          <button data-action="add" data-id="${p.id}">Adicionar</button>
+          <button data-action="add" data-id="${p.id}">../web</button>
         </div>
       `;
       container.appendChild(card);
