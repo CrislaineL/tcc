@@ -1,25 +1,35 @@
-   <!DOCTYPE html>
-   <html lang="pt-BR">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Redirecionando...</title>
-       
-       <!-- Redirecionamento automático -->
-       <meta http-equiv="refresh" content="0; url=minha-pasta/index.html">
-       
-       <!-- Opcional: Mensagem para usuários com JS desabilitado -->
-       <noscript>
-           <meta http-equiv="refresh" content="0; url=minha-pasta/index.html">
-           <p>Redirecionando para o site principal... Se não funcionar, <a href="front/web/index.html">clique aqui</a>.</p>
-       </noscript>
-   </head>
-   <body>
-       <!-- Corpo vazio ou com uma mensagem de loading -->
-       <div style="text-align: center; padding: 50px;">
-           <p>Carregando o Pet Gatô... 🐱</p>
-           <a href="minha-pasta/index.html">Se não redirecionar, clique aqui!</a>
-       </div>
-   </body>
-   </html>
-   
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando para o Pet Gatô...</title>
+    
+    <!-- Redirecionamento automático imediato via Meta (funciona sem JS) -->
+    <meta http-equiv="refresh" content="0; url=front/web/index.html">
+    
+    <!-- Opcional: Para usuários com JS desabilitado -->
+    <noscript>
+        <p>Redirecionando para o site principal... Se não funcionar, <a href="front/web/index.html">clique aqui</a>.</p>
+    </noscript>
+</head>
+<body>
+    <!-- Mensagem de loading simples e temática -->
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif; background-color: #f0f8ff; color: #333;">
+        <h2>🐱 Carregando o Pet Gatô...</h2>
+        <p>Um momento, estamos preparando as patinhas para você!</p>
+        <p><a href="front/web/index.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Se não redirecionar em 3 segundos, clique aqui!</a></p>
+    </div>
+
+    <!-- JavaScript para redirecionamento reforçado (executa imediatamente) -->
+    <script>
+        // Redireciona para a subpasta
+        window.location.href = 'front/web/index.html';
+        
+        // Opcional: Se quiser um delay de 2 segundos para mostrar a mensagem
+        // setTimeout(function() {
+        //     window.location.href = 'front/web/index.html';
+        // }, 2000);
+    </script>
+</body>
+</html>
