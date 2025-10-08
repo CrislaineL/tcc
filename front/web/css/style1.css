@@ -700,6 +700,8 @@ header button:hover {
 
 .cb{
   width: 100%;
+  position: relative;
+  top: 0;left: 204px;
 }
 
 @media (max-width: 768px) {
@@ -708,12 +710,12 @@ header button:hover {
 
   }}
   .tosavet{
-    width: 90%;
+    width: 74%;
     height: 150%;
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 0;left: -2%;
+    top: 0;left: -4.3%;
     gap: 3%;
 
     .vet button{
@@ -861,17 +863,18 @@ header button:hover {
 }
 
 .blog {
-  width: 100%;
+  width: 80%;
   position: relative;
   top: 0;
-  left: -70px;
+  left: -50px;
   color: rgb(76, 76, 80);
   display: flex;
-  gap: 5%;
+  gap: 2%;
+  
 
 }
 .petum {
-  width: 70%;
+  width: 100%;
   height: 356px;
   position: relative;
   top: 0;left: 1%;
@@ -880,6 +883,7 @@ header button:hover {
   border: var(--c2) 3px solid;
   box-shadow: 0 0 40px 30px var(--c2);
   padding: 20px;
+  overflow: hidden;
 
   h2, p {
     width: 50%;
@@ -892,10 +896,10 @@ header button:hover {
 .imn{
   
   img {
-    width: 13.7vw;
+    width: 20vw;
     height: 37.1vh;
     position: relative;
-    top: -20px;left: -4.4%;
+    top: -20px;left: -40.4%;
     border-radius: 15px 0 0 15px;
   }
 }
@@ -906,7 +910,7 @@ header button:hover {
   }
   button {
     position: relative;
-    top: -310px;left: 200px;
+    top: -315px;left: 170px;
     background: transparent;
     border: none;
     font-size: 15px;
