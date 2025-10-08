@@ -337,21 +337,25 @@ header button:hover {
 .animal button {
   border: none;
   background-color:rgb(75, 197, 235);
-  width: 20%;
+  width: 40%;
   height: 90px;
   padding: 0.7%;
   display: flex; /* PARA ALINHAR A IMG E O TEXTO */
   align-items: center;
   justify-content: center;
+  font-size: 15px;
   border-radius: 5%;
-  gap: 50px; /* ESPAÇO ENTRE TEXTO E IMG */
-}
+  gap: 70px; /* ESPAÇO ENTRE TEXTO E IMG */
 
-.animal button img {
-  width: 30%;
-  height: 50%;
+  img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;left: -10%;
   border-radius: 80%;
 }
+}
+
 
 /* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
 @media (max-width: 768px) {
@@ -921,5 +925,23 @@ header button:hover {
       top: 14px;left: 0px;
       
     }
+  }
+}
+
+.video {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  position: relative;
+  top: 0;left: 0;
+  overflow: hidden;
+  padding: 20px;
+
+  img{
+    width: 110%;
+    height: 470px;
+    position: relative;
+    top: -200px;left: -30px;
+    border-radius: 15px;
   }
 }
