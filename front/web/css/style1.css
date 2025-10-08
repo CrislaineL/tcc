@@ -859,3 +859,63 @@ header button:hover {
 @media (max-width:480px) {
   .produtos-grid-dup { grid-template-columns: 1fr; }
 }
+
+.blog {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: -70px;
+  color: rgb(76, 76, 80);
+  display: flex;
+  gap: 5%;
+
+}
+.petum {
+  width: 70%;
+  height: 356px;
+  position: relative;
+  top: 0;left: 1%;
+  justify-content: space-around;
+  border-radius: 20px;
+  border: var(--c2) 3px solid;
+  box-shadow: 0 0 40px 30px var(--c2);
+  padding: 20px;
+
+  h2, p {
+    width: 50%;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -345px;left: 50%;
+  }
+.imn{
+  
+  img {
+    width: 13.7vw;
+    height: 37.1vh;
+    position: relative;
+    top: -20px;left: -4.4%;
+    border-radius: 15px 0 0 15px;
+  }
+}
+  h3 {
+    font-size: 10px;
+    position: relative;
+    top: -330px;left: 50%;
+  }
+  button {
+    position: relative;
+    top: -310px;left: 200px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+
+    img {
+      width: 7%;
+      position: relative;
+      top: 14px;left: 0px;
+      
+    }
+  }
+}
