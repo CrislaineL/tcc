@@ -201,18 +201,54 @@
 <br><br><br><br>
   <div class="video">
     <img src="../web/images/Frete grátis 1.gif" alt="Saúde Pet" />
-  </div>
-<br><br><br><br><br>
-  <br>
-  
-  <div class="promos">
+  </div><br>
+  <div class="petgato">
+  <h2><b style="font-size: 15px; color: rgb(0, 17, 255);"><img src="../web/images/favorito.png" > Aqui no Pet Gatô, você encontra tudo o que o seu pet precisa.</b></h2><br><br><br>
+  </div><br><br><br>
+  <div class="carousel-promos">
+    <!-- Seta Esquerda -->
+    <button class="carousel-btn-prev" aria-label="Anterior">&lt;</button>
     
+    <!-- Trilha dos Itens (seu .promos original, com conteúdo completado) -->
+    <div class="promos">
+      <div class="prim">
+        <img src="../web/images/dois.png" alt="Promoções" /><br><br>
+        <h2><b style="font-size: 20px;">Cuidadora de animais!</b></h2>
+      </div>
+      <div class="prim">
+        <img src="../web/images/tres.png" alt="Promoções" /><br><br>
+        <h2><b style="font-size: 20px;">Tudo que você precisa!</b></h2><br>
+      </div>
+      <div class="prim">
+        <img src="../web/images/cinco.png" alt="Promoções" /><br><br>
+        <center><h2><b style="font-size: 20px;">Vacinação do seu animal preferido!</b></h2><br>
+      </center></div>
+      <div class="prim">
+        <img src="../web/images/seis.png" alt="Promoções" /><br><br>
+        <h2><b style="font-size: 20px;">Promoções Imperdíveis</b></h2><br>
+      </div>
+      <div class="prim">
+        <img src="../web/images/sete.png" alt="Promoções" /><br><br>
+        <h2><b style="font-size: 20px;">Higiene Básica!</b></h2><br>
+      </div>
+      <div class="prim">
+        <img src="../web/images/quatro.png" alt="Promoções" /><br><br>
+        <h2><b style="font-size: 20px;">Cuidador de animais!</b></h2><br>
+      </div>
+    </div>
+
+    
+    <!-- Seta Direita -->
+    <button class="carousel-btn-next" aria-label="Próximo">&gt;</button>
   </div>
+  <br><br><br>
+
+
   <!-- Container dos indicadores (bolinhas) -->
   <div class="carousel-indicators" aria-label="Indicadores do carousel">
     <!-- As bolinhas serão criadas dinamicamente pelo JavaScript -->
   </div>
-  <br><br><br><br><br><br><br><br><br>
+  
 
 <h1><b style="font-size: 45px; color: rgb(0, 17, 255);">Blog Pet Gatô:</b></h1><br><br><br><br><br><br><br><br><br>
   <div class="blog">
@@ -247,6 +283,28 @@
   </div>
   
   </div>
+<br><br><br><br><br><br><br><br><br><br>
+<div class="desp">
+  <h1><b style="font-size: 45px; color: rgb(0, 17, 255);">Animais Desaparecidos:</b></h1><br><br><br><br><br>
+</div>
+    <div class="promocao">
+      <div class="prinm">
+        <img src="../web/images/desaparecido1.png" alt="Promoções" /><br><br>
+      </div>
+      <div class="prinm">
+        <img src="../web/images/desaparecido4.png" alt="Promoções" /><br><br>
+      </div>
+      <div class="prinm">
+        <img src="../web/images/desaparecido5.png" alt="Promoções" /><br><br>
+      </div>
+      <div class="prinm">
+        <img src="../web/images/desaparecido6.png" alt="Promoções" /><br><br>
+      </div>
+    </div>
+    
+
+    
+  
 <br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="footer">
   <div class="footer-content">
@@ -299,6 +357,65 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel-promos');
+  if (!carousel) return; // Sai se não encontrar o carousel
+  
+  const track = carousel.querySelector('.promos');
+  const items = track.querySelectorAll('.prim');
+  const prevBtn = carousel.querySelector('.carousel-btn-prev');
+  const nextBtn = carousel.querySelector('.carousel-btn-next');
+
+  if (items.length <= 1) return; // Não precisa se houver 1 ou menos itens
+
+  let currentIndex = 0;
+  let itemWidth = 0;
+  let gap = 0;
+  const totalItems = items.length;
+
+  function calculateDimensions() {
+    gap = parseFloat(getComputedStyle(track).gap) || 0; // Pega o gap em px
+    itemWidth = items[0].offsetWidth + gap; // Largura total por item
+  }
+
+  function updateCarousel() {
+    const offset = -currentIndex * itemWidth;
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  function moveNext() {
+    currentIndex = (currentIndex + 1) % totalItems; // Rotativo: volta ao 0
+    updateCarousel();
+  }
+
+  function movePrev() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Rotativo: vai ao fim
+    updateCarousel();
+  }
+
+  prevBtn.addEventListener('click', movePrev);
+  nextBtn.addEventListener('click', moveNext);
+
+  // Inicializa
+  calculateDimensions();
+  updateCarousel();
+
+  // Recalcula em resize da janela
+  window.addEventListener('resize', () => {
+    calculateDimensions();
+    updateCarousel();
+  });
+
+  // Opcional: Navegação com teclado (setas esquerda/direita)
+  document.addEventListener('keydown', (e) => {
+    if (document.activeElement === carousel || carousel.contains(document.activeElement)) { // Só se focado no carousel
+      if (e.key === 'ArrowLeft') movePrev();
+      if (e.key === 'ArrowRight') moveNext();
+    }
+  });
+});
+</script>
 
   <script src="./JS/js3.js"></script>
 </body>

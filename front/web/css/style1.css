@@ -12,6 +12,7 @@
   --c3: rgb(75, 197, 235);
   --c4: rgba(197, 218, 226, 0.623);
   --c5: rgba(157, 201, 56, 0.795); /* COR DO TEXTO DOS BOTÕES */
+  --c6: rgb(25, 1, 161); /* COR DAS BOLINHAS DO CAROUSEL */
   --t1: rgb(53, 54, 56);
   --t2: rgba(0, 0, 0, 0.7);
 }
@@ -946,6 +947,159 @@ header button:hover {
   }
 }
 
+.promos{
+  width: 80%;
+  position: relative;
+  top: 0;left: -2%;
+  display: flex;
+  gap: 3%;
+}
+.prim{
+    width: 5%;
+    position: relative;
+    background: rgba(244, 248, 0, 0.13);
+    top: 0;left: 3%;
+    height: auto;
+    border: var(--c3) 3px solid;
+    padding: 10px;
+    border-radius: 15px;
+
+    h2{
+      font-size: 25px;
+      color: var(--c6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    }
+     p{
+      font-size: 15px;
+      color: var(--c6);
+      text-align: justify;
+    }
+
+
+    img{
+      width: 20vw;
+      height: 20vh;
+      position: relative;
+      top: 0;left: 0;
+      border-radius: 15px;
+    }
+  }
+
+.petgato{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+  img{
+    width: 2%;
+    height: 20px;
+    position: relative;
+    top: 3px;left: -10px;
+  }
+}
+
+/* ADIÇÕES PARA O CAROUSEL DAS PROMOÇÕES (MANUAL COM SETAS ROTATIVAS) */
+/* Wrapper do carousel - não conflita com o seu .carousel existente */
+.carousel-promos {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: -2%;
+  overflow: hidden; /* Esconde itens fora da vista */
+  border-radius: 15px; /* Opcional: arredonda o container para combinar com .prim */
+  margin: 20px auto; /* Centraliza se necessário, mas mantém seu posicionamento */
+}
+
+/* Ajustes mínimos no .promos para o carousel (mantém display: flex e gap) */
+.promos {
+  display: flex;
+  gap: 3%;
+  transition: transform 0.4s ease-in-out; /* Animação suave no deslize */
+  width: max-content; /* Permite que a trilha seja mais larga */
+  padding: 10px 0; /* Espaço vertical para setas */
+}
+
+/* Ajustes mínimos no .prim para não encolher no flex (mantém todo o resto) */
+.prim {
+  width: 17%;
+  min-width: 100px; /* Largura mínima para ~5 itens visíveis; ajuste se quiser mais (ex.: 140px para 6) */
+  flex-shrink: 0; 
+  
+  img{
+    width: 100%;
+    height: 190px;
+  }
+}
+
+/* Estilos para as setas (novos, combinando com suas cores --c3) */
+.carousel-btn-prev,
+.carousel-btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(75, 197, 235, 0.8); /* Usa --c3 semi-transparente */
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10; /* Acima dos itens */
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn-prev {
+  left: 10px;
+}
+
+.carousel-btn-next {
+  right: 10px;
+}
+
+.carousel-btn-prev:hover,
+.carousel-btn-next:hover {
+  background: var(--c3, rgb(75, 197, 235)); /* Cor cheia no hover */
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsividade para as setas (integra com suas media queries) */
+@media (max-width: 768px) {
+  .carousel-promos {
+    width: 95%;
+  }
+  
+  .prim {
+    width: 45%; /* ~2 itens visíveis no mobile */
+    min-width: 140px;
+  }
+  
+  .carousel-btn-prev,
+  .carousel-btn-next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+
+
+
+
 
 
 
@@ -978,6 +1132,7 @@ header button:hover {
 }
 
 .footer-content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
@@ -987,6 +1142,7 @@ header button:hover {
 }
 
 .footer-section {
+  width: 100%;
   flex: 1;
   min-width: 250px;
   margin: 20px;
@@ -1107,3 +1263,50 @@ header button:hover {
     border-radius: 4px;
   }
 }
+
+
+
+
+
+
+
+.promocao{
+  width: 90%;
+  position: relative;
+  top: 0;left: -2%;
+  display: flex;
+
+  gap: 3%;
+}
+.prinm{
+    width: 60%;
+    position: relative;
+    top: 0;left: 3%;
+    height: 500px;
+    padding: 10px;
+    border-radius: 15px;
+
+    h2{
+      font-size: 25px;
+      color: var(--c6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    }
+     p{
+      font-size: 15px;
+      color: var(--c6);
+      text-align: justify;
+    }
+
+
+    img{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 0;left: 0;
+      border-radius: 15px;
+    }
+  }

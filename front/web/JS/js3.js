@@ -1,6 +1,7 @@
 const dadosFront = "/assets/produtos.json";
 let produtos = [];
 
+
 // Busca os dados dos produtos e exibe na página
 fetch(dadosFront)
     .then(resp => resp.json())
@@ -424,6 +425,9 @@ btnNext.addEventListener('click', () => {
     if (ev.target === modal) modal.classList.add('oculto');
   });
 
+  
   // render inicial
   renderProdutosGrid();
+
+  
 })();
