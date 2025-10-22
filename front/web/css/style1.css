@@ -12,7 +12,8 @@
   --c3: rgb(75, 197, 235);
   --c4: rgba(197, 218, 226, 0.623);
   --c5: rgba(157, 201, 56, 0.795); /* COR DO TEXTO DOS BOTÕES */
-  --c6: rgb(25, 1, 161); /* COR DAS BOLINHAS DO CAROUSEL */
+  --c6: rgb(27, 2, 168); /* COR DAS BOLINHAS DO CAROUSEL */
+  --c7: linear-gradient(to right, rgb(22, 8, 214), rgb(1, 1, 116));
   --t1: rgb(53, 54, 56);
   --t2: rgba(0, 0, 0, 0.7);
 }
@@ -30,13 +31,12 @@ body {
 @media (max-width: 768px) {
   body {
     width: 100%;
-    overflow: hidden;
   }
 }
 
 /* CABEÇALHO UM */
 header {
-  background: var(--c1);
+  background: var(--c6);
   color: black;
   width: 100%;
   height: 85px;
@@ -51,7 +51,7 @@ header {
 
 header h1 {
   font-family: 'Brush Script MT', cursive;
-  color: rgb(6, 43, 255);
+  color: var(--c3);
   font-size: 36.5px; /* TAMANHO DO TEXTO */
   position: relative;
   justify-content: center;
@@ -81,16 +81,18 @@ header button:hover {
 }
 
 /* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DO TÍTULO */
-@media (max-width: 768px) {
+@media (max-width: 200%) {
   header h1 {
-    width: 60%;
+    width: 50%;
     font-size: 30px;
   }
 }
 @media (max-width: 768px) {
   header {
-    width: 78%;
+    width: 121%;
     font-size: 30px;
+    position: fixed;
+    top: 0;left: -10%;
   }
 }
 
@@ -391,6 +393,7 @@ header button:hover {
 }/* --- wrapper do fundo ondulado --- */
 .section-fundo {
   position: relative;
+  
   width: 100%;
   min-height: 0;          /* controla "a altura" do bloco — ajuste se precisar */
   margin: 40px 0;             /* espaçamento externo (opcional) */
@@ -402,12 +405,14 @@ header button:hover {
     width: 40%;
     position: relative;
     top: 0;left: 0;
+    
   }}
 
 /* SVG do fundo (faz as ondulações nas extremidades) */
 .fundo-svg {
   position: absolute;
   left: 0;
+  
   top: -16%;
   width: 200%;
   height: 150%;                /* atrás do conteúdo */
@@ -417,6 +422,7 @@ header button:hover {
 
 /* conteúdo que fica sobre o SVG */
 .fundoparcial-content {
+  
   position: relative;             /* acima do SVG */
   padding: 30px 20px;         /* controla o "padding" interno (altura visível) */
   max-width: 1200px;
@@ -760,7 +766,7 @@ header button:hover {
     .banho, .vet {
       width: 70%;
       height: 350px;
-      background-color: rgba(11, 167, 206, 0.438);
+      background-color: var(--c6);
       display: flex;
       justify-content: space-around;
       border-radius: 25px;
@@ -954,6 +960,21 @@ header button:hover {
   display: flex;
   gap: 3%;
 }
+
+  
+    @media (max-width: 768px) {
+      .video {
+        position: relative;
+        top: -40vh;left: 0;
+        width: 130%;
+      }
+      .video img {
+        top: -400%;left: 0;
+        width: 220%;
+        height: 800%;
+      }
+    }
+
 .prim{
     width: 5%;
     position: relative;
@@ -988,7 +1009,12 @@ header button:hover {
       border-radius: 15px;
     }
   }
-
+    @media (max-width: 768px) {
+      .promos, .prim, .carousel-btn-next, .carousel-promos {
+        display: none;
+        width: 0;
+      }
+    }
 .petgato{
   width: 100%;
   display: flex;
@@ -1008,14 +1034,22 @@ header button:hover {
     top: 3px;left: -10px;
   }
 }
+@media (max-width: 768px) {
+      .petgato {
+        position: relative;
+        top: -32vh;left: 0;
+        width: 80%;
+      }
+    }
+    
 
 /* ADIÇÕES PARA O CAROUSEL DAS PROMOÇÕES (MANUAL COM SETAS ROTATIVAS) */
 /* Wrapper do carousel - não conflita com o seu .carousel existente */
 .carousel-promos {
-  width: 80%;
+  width: 100%;
   position: relative;
   top: 0;
-  left: -2%;
+  left: 140px;
   overflow: hidden; /* Esconde itens fora da vista */
   border-radius: 15px; /* Opcional: arredonda o container para combinar com .prim */
   margin: 20px auto; /* Centraliza se necessário, mas mantém seu posicionamento */
@@ -1310,3 +1344,358 @@ header button:hover {
       border-radius: 15px;
     }
   }
+
+
+
+
+
+
+
+.bomba{
+  background: var(--c7);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;left: 0;
+  padding: 20px;
+  h1{
+  color: rgb(255, 255, 255);
+  display: flex;
+  font: 3em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+h5, p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  font-size: 15px;
+  position: relative;
+  
+}
+.container-carrossel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 450px;
+  margin: auto;
+}
+
+.carrosselum {
+  display: flex;
+  gap: 15px;  /* Espaçamento entre os produtos */
+  padding: 10px;
+  width: 70%;  /* Ajuste a largura conforme necessário */
+  overflow: hidden;  /* Garante que nada ultrapasse os limites */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+}
+
+.cardt {
+  background: white;
+  width: 300px;  /* Largura fixa para cada produto */
+  height: 340px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;  /* Garante que os produtos não se ajustem ao tamanho da tela */
+}
+
+.cardt img {
+  width: 100%;  /* Garante que a imagem ocupe toda a largura do card */
+  height: 200px;  /* Altura fixa para a imagem */
+  position: relative;
+  top: -8px;left: 0;
+}
+.vejamais{
+  
+  button {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;left: 80px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+
+    img {
+      width: 10%;
+      height: 6%;
+      position: relative;
+      top: 8px;left: 0px;
+      
+    }
+  }
+}
+.btn {
+  background:var(--c3);
+  color: white;
+  width: 10%;
+  border: none;
+  font-size: 24px;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+}
+
+
+/* =====================================================
+   AJUSTES DE RESPONSIVIDADE — PRESERVA LAYOUT DESKTOP
+   ===================================================== */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .Containerheader {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .anuncios,
+  .juros,
+  .animal,
+  .section-fundo,
+  .tosavet,
+  #produtos-container,
+  .blog {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  /* Ajuste para largura total da viewport */
+  .carousel,
+  .mainContainer,
+  .mainContainer-dup,
+  .banner {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Corrige imagens grandes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Texto mais ajustado */
+  h1, h2, h3, p, button {
+    font-size: 90%;
+  }
+
+  /* Evita sobreposição */
+  .petum,
+  .banho,
+  .vet {
+    overflow: hidden;
+  }
+
+  /* Mantém botões clicáveis e legíveis */
+  button {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
+
+    .ôblog  {
+      width: 100%;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 25px;
+      position: relative;
+      top: -20vh;left: 0;
+    }
+
+
+
+
+
+.blog {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: -50px;
+  color: rgb(76, 76, 80);
+  display: flex;
+  gap: 2%;
+  
+
+}
+.petum {
+  width: 100%;
+  height: 356px;
+  position: relative;
+  top: 0;left: 1%;
+  justify-content: space-around;
+  border-radius: 20px;
+  border: var(--c2) 3px solid;
+  box-shadow: 0 0 40px 30px var(--c2);
+  padding: 20px;
+  overflow: hidden;
+
+  h2, p {
+    width: 50%;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -345px;left: 50%;
+  }
+.imn{
+  
+  img {
+    width: 20vw;
+    height: 37.1vh;
+    position: relative;
+    top: -20px;left: -40.4%;
+    border-radius: 15px 0 0 15px;
+  }
+}
+  h3 {
+    font-size: 10px;
+    position: relative;
+    top: -330px;left: 50%;
+  }
+  button {
+    position: relative;
+    top: -315px;left: 170px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+
+    img {
+      width: 7%;
+      position: relative;
+      top: 14px;left: 0px;
+      
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+      .ôblog h1{
+        width: 100%;
+        position: relative;
+        top: -15vh;left: 0;
+        
+      }
+}  
+
+
+@media (max-width: 768px) {
+      .blog {
+        width: 100%;
+        position: relative;
+        top: -20vh;left: 0;
+        
+      }
+      .petum, .imn img {
+        position: relative;
+        top: -30vh;left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .petum p, .petum h3, .petum img {
+      display: none;
+      }
+    
+  .petum h2 {
+    width: 80%;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 20px;left: 5%;
+  }
+}
+.petum button {
+    position: relative;
+    top: -5px;left: -10px;
+    background: transparent;
+    border: none;
+    font-size: 10px;
+
+    
+  }  
+  
+@media (max-width: 768px) {
+      .imn img {
+        position: relative;
+        top: -30vh;left: 0;
+        width: 10,
+        0%;
+        height: 300px;
+      }
+    }
+
+    
+@media (max-width: 768px) {
+      .desp{
+        position: relative;
+        top: -60vh;left: -45px;
+        width: 70%;
+        height: 300px;
+        display: flex;
+      }
+      .promocao{
+        position: relative;
+        top: -80vh;left: 0;
+        width: 100%;
+        height: 200px;
+
+      }
+      .promocao img{
+        position: relative;
+        top: 0;left: -10px;
+        width: 150vh;
+        height: 300px;
+      }
+      
+    }
+
+    
+  
+@media (max-width: 768px) {
+      .bomba {
+        width: 100%;
+        height: 800px;
+        position: relative;
+        top: -70vh;left: 0;
+      }
+    }
+    
+  
+@media (max-width: 768px) {
+      .carrosselum {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        top: 0;left: 0;
+      }
+    }
+  
+
+@media (max-width: 768px) {
+      .footer {
+        position: relative;
+        top: -70vh;left: 0;
+      }
+    }

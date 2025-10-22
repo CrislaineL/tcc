@@ -1,6 +1,26 @@
 const dadosFront = "/assets/produtos.json";
 let produtos = [];
 
+const carrosselum = document.querySelector('.carrosselum');
+const btnAvancar = document.querySelector('.avancar');
+const btnVoltar = document.querySelector('.voltar');
+
+// Define o quanto o carrossel vai rolar (em pixels)
+const scrollAmount = 220;
+
+btnAvancar.addEventListener('click', () => {
+  carrosselum.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+btnVoltar.addEventListener('click', () => {
+  carrosselum.scrollBy({
+    left: -scrollAmount,
+    behavior: 'smooth'
+  });
+});
 
 // Busca os dados dos produtos e exibe na página
 fetch(dadosFront)
