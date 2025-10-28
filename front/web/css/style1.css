@@ -1159,7 +1159,7 @@ header button:hover {
 
 .footer {
   width: 100%;
-  background-color:var(--c2); /* Verde escuro para tema pet/natureza */
+  background-color:var(--c6); /* Verde escuro para tema pet/natureza */
   color: #5c5757;
   padding: 40px 0 20px;
   font-family: 'Arial', sans-serif;
