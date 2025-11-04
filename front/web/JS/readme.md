@@ -524,4 +524,478 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </html>
 
-Concerte a parte de responsivi
+Concerte a parte de responsividade:
+
+
+
+    /* responsividade */
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    display: flex;
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DO TÍTULO */
+@media (max-width: 200%) {
+  header h1 {
+    width: 50%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    width: 121%;
+    font-size: 30px;
+    position: fixed;
+    top: 0;left: -10%;
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DAS IMAGENS */
+@media (max-width: 768px) {
+  header button img {
+    width: 25px; /* diminui o tamanho das imagens */
+  }
+}
+
+/* BARRA DE PESQUISA */
+.search-icon {
+  width: 60%;
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .search-icon {
+    display: none; /* some completamente */
+  }
+}
+
+/* Quando passar o mouse (somente em dispositivos que suportam hover), exibe a imagem */
+@media (hover: hover) and (pointer: fine) {
+  .Containerheader button:hover img {
+    display: inline-block; /* mostra a imagem ao passar o mouse */
+  }
+}
+
+/* Em telas pequenas (responsivo, tipo celular), as imagens continuam ocultas */
+@media (max-width: 768px) {
+  .Containerheader button img {
+    display: none !important; /* garante que no mobile nunca aparece */
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncios {
+    display: none; /* some completamente */
+  }
+}  
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 90%; /* AJUSTA LARGURA NO MOBILE */
+    height: 250px; /* ALTURA MENOR */
+  }
+
+  .carousel img {
+    width: 90%; /* IMAGEM OCUPA MAIS ESPAÇO */
+  }
+
+  .prev,
+  .next {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeInDown {
+  from {
+    opacity: 0; /* INICIA COM OPACIDADE 0 */
+    transform: translateY(-20px); /* INICIA 20PX ACIMA */
+  }
+  to {
+    opacity: 1; /* FINALIZA COM OPACIDADE 1 */
+    transform: translateY(0); /* FINALIZA NA POSIÇÃO ORIGINAL */
+  }
+}
+
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .animal img {
+    display: none; /* some completamente */
+  }
+
+  .animal button {
+    width: 100%;
+    padding: 5px;
+    border-radius: 25%;
+  }
+
+  .animal {
+    position: relative;
+    top: 0;
+    left: -1%;
+    width: 80%;
+    gap: 2%;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-fundo {
+    width: 40%;
+    position: relative;
+    top: 0;left: 0;
+    
+  }}
+
+  
+@media (max-width: 768px) {
+  .section-fundo {
+    width: 40%;
+    position: relative;
+    top: 0;left: 0;
+    
+  }}
+  
+
+@media (max-width: 768px) {
+  .fundo-svg, .fundoparcial-content, .animal, .pet, .section-fundo  {
+    display: none; /* some completamente */
+  }}
+
+
+  
+  
+/* responsividade */
+@media (max-width: 768px) {
+  .fundoparcial-content { padding: 20px 12px; }
+  .animal button { min-width: 48%; height: 56px; border-radius: 12px; }
+  .animal button img { display: inline-block; width: 28px; height: 28px; }
+}
+
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .juros {
+    display: none; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .produtos-navigation {
+    gap: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cb {
+    display: none; /* some completamente */
+
+  }}
+
+  
+@media (max-width: 768px) {
+  .tosavet {
+    display: none; /* some completamente */
+
+  }
+.h2 {
+    width: 0;
+    font-size: 1px;
+  }}
+    .banho, .vet {
+      width: 70%;
+      height: 350px;
+      background-color: var(--c6);
+      display: flex;
+      justify-content: space-around;
+      border-radius: 25px;
+      
+      
+
+       & img{
+        width: 50%;
+        border-radius: 70% 0 0 0 ; 
+        position: relative;
+        top: 0;left: 10%; 
+      }
+      & h2{
+        font-size: 15px;
+        color: rgb(233, 224, 142);
+        position: relative;
+        top: 25%;left: 5%;
+      }
+    }
+
+    @media (max-width:900px) {
+  .produtos-grid-dup { grid-template-columns: repeat(2, 1fr); }
+  .conteudo-produto-dup { flex-direction:column; align-items:flex-start; }
+}
+@media (max-width:480px) {
+  .produtos-grid-dup { grid-template-columns: 1fr; }
+}
+
+  
+    @media (max-width: 768px) {
+      .video {
+        position: relative;
+        top: -40vh;left: 0;
+        width: 130%;
+      }
+      .video img {
+        top: -400%;left: 0;
+        width: 220%;
+        height: 800%;
+      }
+    }
+
+    
+    @media (max-width: 768px) {
+      .promos, .prim, .carousel-btn-next, .carousel-promos {
+        display: none;
+        width: 0;
+      }
+    }
+    
+@media (max-width: 768px) {
+      .petgato {
+        position: relative;
+        top: -32vh;left: 0;
+        width: 80%;
+      }
+    }
+    
+/* Responsividade para as setas (integra com suas media queries) */
+@media (max-width: 768px) {
+  .carousel-promos {
+    width: 95%;
+  }
+  
+  .prim {
+    width: 45%; /* ~2 itens visíveis no mobile */
+    min-width: 140px;
+  }
+  
+  .carousel-btn-prev,
+  .carousel-btn-next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+    margin: 15px 0;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    border-radius: 4px;
+  }
+}
+
+
+/* =====================================================
+   AJUSTES DE RESPONSIVIDADE — PRESERVA LAYOUT DESKTOP
+   ===================================================== */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .Containerheader {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .anuncios,
+  .juros,
+  .animal,
+  .section-fundo,
+  .tosavet,
+  #produtos-container,
+  .blog {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  /* Ajuste para largura total da viewport */
+  .carousel,
+  .mainContainer,
+  .mainContainer-dup,
+  .banner {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Corrige imagens grandes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Texto mais ajustado */
+  h1, h2, h3, p, button {
+    font-size: 90%;
+  }
+
+  /* Evita sobreposição */
+  .petum,
+  .banho,
+  .vet {
+    overflow: hidden;
+  }
+
+  /* Mantém botões clicáveis e legíveis */
+  button {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+      .ôblog h1{
+        width: 100%;
+        position: relative;
+        top: -35vh;left: 0;
+        
+      }
+}  
+
+
+@media (max-width: 768px) {
+      .blog {
+        width: 100%;
+        position: relative;
+        top: -20vh;left: 0;
+        
+      }
+      .petum, .imn img {
+        position: relative;
+        top: -30vh;left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .petum p, .petum h3, .petum img {
+      display: none;
+      }
+    
+  .petum h2 {
+    width: 80%;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 20px;left: 5%;
+  }
+
+.petum button {
+    position: relative;
+    top: -5px;left: -10px;
+    background: transparent;
+    border: none;
+    font-size: 10px;
+
+    h4 {
+      font-size: 10px;
+      position: relative;
+      top: -50%;left: 50%;
+    }
+  }  
+  }
+@media (max-width: 768px) {
+      .imn img {
+        position: relative;
+        top: -30vh;left: 0;
+        width: 10,
+        0%;
+        height: 300px;
+      }
+    }
+
+    
+@media (max-width: 768px) {
+      .desp{
+        position: relative;
+        top: -60vh;left: -45px;
+        width: 70%;
+        height: 300px;
+        display: flex;
+      }
+      .promocao{
+        position: relative;
+        top: -80vh;left: 0;
+        width: 100%;
+        height: 200px;
+
+      }
+      .promocao img{
+        position: relative;
+        top: 0;left: -10px;
+        width: 150vh;
+        height: 300px;
+      }
+      
+    }
+
+    
+  
+@media (max-width: 768px) {
+      .bomba {
+        width: 100%;
+        height: 800px;
+        position: relative;
+        top: -70vh;left: 0;
+      }
+    }
+    
+  
+@media (max-width: 768px) {
+      .carrosselum {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        top: 0;left: 0;
+      }
+    }
+  
+
+@media (max-width: 768px) {
+      .footer {
+        position: relative;
+        top: -70vh;left: 0;
+      }
+    }
+
