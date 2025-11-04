@@ -23,17 +23,13 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* ESCONDE A ROLAGEM LATERAL */
+  width: 100%;
   display: flex;
+  overflow-x: hidden; /* ESCONDE A ROLAGEM LATERAL */
+  justify-content: center; /* CENTRALIZA O CONTEÚDO NA PÁGINA */
   flex-direction: column; /* ORGANIZA OS ELEMENTOS EM COLUNAS */
   align-items: center; /* CENTRALIZA OS ELEMENTOS NA PÁGINA */
 }
-@media (max-width: 768px) {
-  body {
-    width: 100%;
-  }
-}
-
 /* CABEÇALHO UM */
 header {
   background: var(--c6);
@@ -80,40 +76,6 @@ header button:hover {
   font-size: 1.8vh;
 }
 
-/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DO TÍTULO */
-@media (max-width: 200%) {
-  header h1 {
-    width: 50%;
-    font-size: 30px;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    width: 121%;
-    font-size: 30px;
-    position: fixed;
-    top: 0;left: -10%;
-  }
-}
-
-/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DAS IMAGENS */
-@media (max-width: 768px) {
-  header button img {
-    width: 25px; /* diminui o tamanho das imagens */
-  }
-}
-
-/* BARRA DE PESQUISA */
-.search-icon {
-  width: 60%;
-}
-
-/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
-@media (max-width: 768px) {
-  .search-icon {
-    display: none; /* some completamente */
-  }
-}
 
 /* CONTAINER DOIS */
 .Containerheader {
@@ -144,20 +106,6 @@ header button:hover {
 
 .Containerheader button img {
   display: none; /* some em todas as telas inicialmente */
-}
-
-/* Quando passar o mouse (somente em dispositivos que suportam hover), exibe a imagem */
-@media (hover: hover) and (pointer: fine) {
-  .Containerheader button:hover img {
-    display: inline-block; /* mostra a imagem ao passar o mouse */
-  }
-}
-
-/* Em telas pequenas (responsivo, tipo celular), as imagens continuam ocultas */
-@media (max-width: 768px) {
-  .Containerheader button img {
-    display: none !important; /* garante que no mobile nunca aparece */
-  }
 }
 
 /* Anúncios buttons */
@@ -195,11 +143,6 @@ header button:hover {
   left: -6%;
 }
 
-@media (max-width: 768px) {
-  .anuncios {
-    display: none; /* some completamente */
-  }
-}
 
 /* BANNER */
 .banner {
@@ -295,35 +238,6 @@ header button:hover {
   background: rgb(18, 14, 231); /* Bolinha ativa */
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .carousel {
-    width: 90%; /* AJUSTA LARGURA NO MOBILE */
-    height: 250px; /* ALTURA MENOR */
-  }
-
-  .carousel img {
-    width: 90%; /* IMAGEM OCUPA MAIS ESPAÇO */
-  }
-
-  .prev,
-  .next {
-    font-size: 16px;
-    padding: 8px;
-  }
-}
-
-/* ANIMAÇÃO */
-@keyframes fadeInDown {
-  from {
-    opacity: 0; /* INICIA COM OPACIDADE 0 */
-    transform: translateY(-20px); /* INICIA 20PX ACIMA */
-  }
-  to {
-    opacity: 1; /* FINALIZA COM OPACIDADE 1 */
-    transform: translateY(0); /* FINALIZA NA POSIÇÃO ORIGINAL */
-  }
-}
 
 /* ANIMAL BUTTONS */
 .animal {
@@ -360,28 +274,6 @@ header button:hover {
 }
 
 
-/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
-@media (max-width: 768px) {
-  .animal img {
-    display: none; /* some completamente */
-  }
-
-  .animal button {
-    width: 100%;
-    padding: 5px;
-    border-radius: 25%;
-  }
-
-  .animal {
-    position: relative;
-    top: 0;
-    left: -1%;
-    width: 80%;
-    gap: 2%;
-    padding: 10px;
-  }
-}
-
 .outros, .pet {
   width: 30%;
   height: 10%;
@@ -400,13 +292,6 @@ header button:hover {
   overflow: visible;
 }
 
-@media (max-width: 768px) {
-  .section-fundo {
-    width: 40%;
-    position: relative;
-    top: 0;left: 0;
-    
-  }}
 
 /* SVG do fundo (faz as ondulações nas extremidades) */
 .fundo-svg {
@@ -456,12 +341,6 @@ header button:hover {
   color: #003;                /* cor do texto do botão (ajuste se quiser) */
   font-weight: 600;
 }
-
-@media (max-width: 768px) {
-  .fundo-svg, .fundoparcial-content, .animal, .pet, .section-fundo  {
-    display: none; /* some completamente */
-  }}
-
 /* img dentro do botão */
 .animal button img {
   width: 36px;
@@ -477,12 +356,6 @@ header button:hover {
   color: #fff;
 }
 
-/* responsividade */
-@media (max-width: 768px) {
-  .fundoparcial-content { padding: 20px 12px; }
-  .animal button { min-width: 48%; height: 56px; border-radius: 12px; }
-  .animal button img { display: inline-block; width: 28px; height: 28px; }
-}
 
 /* JUROS */
 .juros {
@@ -526,13 +399,6 @@ header button:hover {
   position: relative;
   top: 0;
   left: -6%;
-}
-
-/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
-@media (max-width: 768px) {
-  .juros {
-    display: none; 
-  }
 }
 
 /* PRODUTOS CARDS */
@@ -584,11 +450,6 @@ header button:hover {
   transform: translateY(-10%); /* ajusta para ficar no centro exato */
   pointer-events: none; 
          /* evita bloquear cliques em outros elementos */
-}
-@media (max-width: 768px) {
-  .produtos-navigation {
-    gap: 10%;
-  }
 }
 
 .produtos-navigation button {
@@ -715,11 +576,6 @@ header button:hover {
   top: 0;left: 204px;
 }
 
-@media (max-width: 768px) {
-  .cb {
-    display: none; /* some completamente */
-
-  }}
   .tosavet{
     width: 74%;
     height: 150%;
@@ -754,38 +610,6 @@ header button:hover {
     }
 }
 
-@media (max-width: 768px) {
-  .tosavet {
-    display: none; /* some completamente */
-
-  }
-.h2 {
-    width: 0;
-    font-size: 1px;
-  }}
-    .banho, .vet {
-      width: 70%;
-      height: 350px;
-      background-color: var(--c6);
-      display: flex;
-      justify-content: space-around;
-      border-radius: 25px;
-      
-      
-
-       & img{
-        width: 50%;
-        border-radius: 70% 0 0 0 ; 
-        position: relative;
-        top: 0;left: 10%; 
-      }
-      & h2{
-        font-size: 15px;
-        color: rgb(233, 224, 142);
-        position: relative;
-        top: 25%;left: 5%;
-      }
-    }
     /* ========== ESTILOS PARA A SEÇÃO DUPLICADA ========== */
 /* Ajustes mínimos — ficam isolados (sufixados com -dup) para não conflitar */
 .mainContainer-dup {
@@ -864,14 +688,7 @@ header button:hover {
 /* classe pra esconder (usada no seu código original também) */
 .oculto { display: none !important; }
 
-/* responsivo simples */
-@media (max-width:900px) {
-  .produtos-grid-dup { grid-template-columns: repeat(2, 1fr); }
-  .conteudo-produto-dup { flex-direction:column; align-items:flex-start; }
-}
-@media (max-width:480px) {
-  .produtos-grid-dup { grid-template-columns: 1fr; }
-}
+
 
 .blog {
   width: 80%;
@@ -971,20 +788,6 @@ h4 {
   gap: 3%;
 }
 
-  
-    @media (max-width: 768px) {
-      .video {
-        position: relative;
-        top: -40vh;left: 0;
-        width: 130%;
-      }
-      .video img {
-        top: -400%;left: 0;
-        width: 220%;
-        height: 800%;
-      }
-    }
-
 .prim{
     width: 5%;
     position: relative;
@@ -1019,12 +822,6 @@ h4 {
       border-radius: 15px;
     }
   }
-    @media (max-width: 768px) {
-      .promos, .prim, .carousel-btn-next, .carousel-promos {
-        display: none;
-        width: 0;
-      }
-    }
 .petgato{
   width: 100%;
   display: flex;
@@ -1044,13 +841,6 @@ h4 {
     top: 3px;left: -10px;
   }
 }
-@media (max-width: 768px) {
-      .petgato {
-        position: relative;
-        top: -32vh;left: 0;
-        width: 80%;
-      }
-    }
     
 
 /* ADIÇÕES PARA O CAROUSEL DAS PROMOÇÕES (MANUAL COM SETAS ROTATIVAS) */
@@ -1120,52 +910,6 @@ h4 {
   background: var(--c3, rgb(75, 197, 235)); /* Cor cheia no hover */
   transform: translateY(-50%) scale(1.1);
 }
-
-/* Responsividade para as setas (integra com suas media queries) */
-@media (max-width: 768px) {
-  .carousel-promos {
-    width: 95%;
-  }
-  
-  .prim {
-    width: 45%; /* ~2 itens visíveis no mobile */
-    min-width: 140px;
-  }
-  
-  .carousel-btn-prev,
-  .carousel-btn-next {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
   width: 100%;
@@ -1280,39 +1024,6 @@ h4 {
   font-size: 12px;
   color: #1e9962;
 }
-
-/* Responsividade para Mobile */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-section {
-    min-width: auto;
-    margin: 15px 0;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-  }
-
-  .newsletter-form input {
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
-  .newsletter-form button {
-    border-radius: 4px;
-  }
-}
-
-
-
-
-
-
 
 .promocao{
   width: 90%;
@@ -1456,6 +1167,306 @@ h5, p{
 }
 
 
+    .ôblog  {
+      width: 100%;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 25px;
+      position: relative;
+      top: -20vh;left: 0;
+    }
+
+
+    /* responsividade */
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    display: flex;
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DO TÍTULO */
+@media (max-width: 200%) {
+  header h1 {
+    width: 50%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    width: 121%;
+    font-size: 30px;
+    position: fixed;
+    top: 0;left: -10%;
+  }
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA, DIMINUI O TAMANHO DAS IMAGENS */
+@media (max-width: 768px) {
+  header button img {
+    width: 25px; /* diminui o tamanho das imagens */
+  }
+}
+
+/* BARRA DE PESQUISA */
+.search-icon {
+  width: 60%;
+}
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .search-icon {
+    display: none; /* some completamente */
+  }
+}
+
+/* Quando passar o mouse (somente em dispositivos que suportam hover), exibe a imagem */
+@media (hover: hover) and (pointer: fine) {
+  .Containerheader button:hover img {
+    display: inline-block; /* mostra a imagem ao passar o mouse */
+  }
+}
+
+/* Em telas pequenas (responsivo, tipo celular), as imagens continuam ocultas */
+@media (max-width: 768px) {
+  .Containerheader button img {
+    display: none !important; /* garante que no mobile nunca aparece */
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncios {
+    display: none; /* some completamente */
+  }
+}  
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 90%; /* AJUSTA LARGURA NO MOBILE */
+    height: 250px; /* ALTURA MENOR */
+  }
+
+  .carousel img {
+    width: 90%; /* IMAGEM OCUPA MAIS ESPAÇO */
+  }
+
+  .prev,
+  .next {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeInDown {
+  from {
+    opacity: 0; /* INICIA COM OPACIDADE 0 */
+    transform: translateY(-20px); /* INICIA 20PX ACIMA */
+  }
+  to {
+    opacity: 1; /* FINALIZA COM OPACIDADE 1 */
+    transform: translateY(0); /* FINALIZA NA POSIÇÃO ORIGINAL */
+  }
+}
+
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .animal img {
+    display: none; /* some completamente */
+  }
+
+  .animal button {
+    width: 100%;
+    padding: 5px;
+    border-radius: 25%;
+  }
+
+  .animal {
+    position: relative;
+    top: 0;
+    left: -1%;
+    width: 80%;
+    gap: 2%;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-fundo {
+    width: 40%;
+    position: relative;
+    top: 0;left: 0;
+    
+  }}
+
+  
+@media (max-width: 768px) {
+  .section-fundo {
+    width: 40%;
+    position: relative;
+    top: 0;left: 0;
+    
+  }}
+  
+
+@media (max-width: 768px) {
+  .fundo-svg, .fundoparcial-content, .animal, .pet, .section-fundo  {
+    display: none; /* some completamente */
+  }}
+
+
+  
+  
+/* responsividade */
+@media (max-width: 768px) {
+  .fundoparcial-content { padding: 20px 12px; }
+  .animal button { min-width: 48%; height: 56px; border-radius: 12px; }
+  .animal button img { display: inline-block; width: 28px; height: 28px; }
+}
+
+
+/* 🔹 QUANDO A TELA FOR PEQUENA A BARRA SOME */
+@media (max-width: 768px) {
+  .juros {
+    display: none; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .produtos-navigation {
+    gap: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cb {
+    display: none; /* some completamente */
+
+  }}
+
+  
+@media (max-width: 768px) {
+  .tosavet {
+    display: none; /* some completamente */
+
+  }
+.h2 {
+    width: 0;
+    font-size: 1px;
+  }}
+    .banho, .vet {
+      width: 70%;
+      height: 350px;
+      background-color: var(--c6);
+      display: flex;
+      justify-content: space-around;
+      border-radius: 25px;
+      
+      
+
+       & img{
+        width: 50%;
+        border-radius: 70% 0 0 0 ; 
+        position: relative;
+        top: 0;left: 10%; 
+      }
+      & h2{
+        font-size: 15px;
+        color: rgb(233, 224, 142);
+        position: relative;
+        top: 25%;left: 5%;
+      }
+    }
+
+    @media (max-width:900px) {
+  .produtos-grid-dup { grid-template-columns: repeat(2, 1fr); }
+  .conteudo-produto-dup { flex-direction:column; align-items:flex-start; }
+}
+@media (max-width:480px) {
+  .produtos-grid-dup { grid-template-columns: 1fr; }
+}
+
+  
+    @media (max-width: 768px) {
+      .video {
+        position: relative;
+        top: -40vh;left: 0;
+        width: 130%;
+      }
+      .video img {
+        top: -400%;left: 0;
+        width: 220%;
+        height: 800%;
+      }
+    }
+
+    
+    @media (max-width: 768px) {
+      .promos, .prim, .carousel-btn-next, .carousel-promos {
+        display: none;
+        width: 0;
+      }
+    }
+    
+@media (max-width: 768px) {
+      .petgato {
+        position: relative;
+        top: -32vh;left: 0;
+        width: 80%;
+      }
+    }
+    
+/* Responsividade para as setas (integra com suas media queries) */
+@media (max-width: 768px) {
+  .carousel-promos {
+    width: 95%;
+  }
+  
+  .prim {
+    width: 45%; /* ~2 itens visíveis no mobile */
+    min-width: 140px;
+  }
+  
+  .carousel-btn-prev,
+  .carousel-btn-next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+    margin: 15px 0;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    border-radius: 4px;
+  }
+}
+
+
 /* =====================================================
    AJUSTES DE RESPONSIVIDADE — PRESERVA LAYOUT DESKTOP
    ===================================================== */
@@ -1520,17 +1531,6 @@ h5, p{
     transform-origin: top center;
   }
 }
-
-    .ôblog  {
-      width: 100%;
-      text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 25px;
-      position: relative;
-      top: -20vh;left: 0;
-    }
-
-
 
 
 
@@ -1647,3 +1647,4 @@ h5, p{
         top: -70vh;left: 0;
       }
     }
+
