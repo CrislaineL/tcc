@@ -1,118 +1,90 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+const jsonwebtoken = require("jsonwebtoken");
+const Middlewares = require('../middleware/auth');
 
-const create = async (req, res) => {
-  const { email, senha } = req.body; 
+const login = async (req, res) => {
+    const { email, senha } = req.body;
+    try {
+        const user = await prisma.user.findFirst({
+            where: {
+                email: email,
+            }
+        });
 
-  try {
-    const novoLogin = await prisma.login.create({
-      data: {
-        email,
-        senha,
-      },
-    });
-    res.status(201).json(novoLogin);  
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao criar login' });
-  }
+        if (!user) {
+            return res.status(401).json({ message: 'E-mail ou senha incorretos!' });
+        } else {
+            const isValidsenha = await Middlewares.validatePassword(senha, user.senha);
+            if (!isValidsenha) {
+                return res.status(401).json({ message: 'E-mail ou senha incorretos!' }).end();
+            }
+            const token = jsonwebtoken.sign(
+                {
+                    id: user.id,
+                    nome: user.nome,
+                    email: user.email,
+                },
+                process.env.SECRET_JWT || 'meu_segredo_jwt',
+                { expiresIn: "30min" }
+            );
+            res.status(200).json({ token: token });
+        }
+    } catch (err) {
+        res.status(500).json({ message: 'Erro interno do servidor', error: err.message });
+    }
 };
 
 const read = async (req, res) => {
-  try {
-    const logins = await prisma.login.findMany(); 
-    res.status(200).json(logins);  
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao listar os logins' });
-  }
-};
-
-const readOne = async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const login = await prisma.login.findUnique({
-      where: { id: parseInt(id) },
-    });
-
-    if (!login) {
-      return res.status(404).json({ message: 'Login não encontrado' });
+    try {
+        const users = await prisma.user.findMany();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar user' });
     }
+}
 
-    res.status(200).json(login); 
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao buscar o login por ID' });
-  }
-};
+const create = async (req, res) => {
+    try {
+        req.body.senha = await Middlewares.createHash(req.body.senha);
+        const user = await prisma.user.create({
+            data: req.body
+        });
+        res.status(201).json(user);
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao criar user', details: error.message });
+    }
+}
 
 const update = async (req, res) => {
-  const { id } = req.params;
-  const { nome, email, senha } = req.body; 
-
-  try {
-    const loginAtualizado = await prisma.login.update({
-      where: { id: parseInt(id) },
-      data: {
-        nome,
-        email,
-        senha, 
-      },
-    });
-
-    res.status(200).json(loginAtualizado); 
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao atualizar o login' });
-  }
-};
-const autenticar = async (req, res) => {
-  const { email, senha } = req.body;
-
-  try {
-    const usuario = await prisma.login.findUnique({
-      where: { email },
-    });
-
-    if (!usuario || usuario.senha !== senha) {
-      return res.status(401).json({ message: 'Email ou senha inválidos' });
+    const { id } = req.params;
+    try {
+        const user = await prisma.user.update({
+            where: { id: Number(id) },
+            data: req.body
+        });
+        res.status(202).json(user);
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao atualizar user', details: error.message });
     }
+}
 
-    res.status(200).json({ message: 'Login realizado com sucesso', usuario });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao autenticar o login' });
-  }
-};
-
-const remove = async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const loginDeletado = await prisma.login.delete({
-      where: { id: parseInt(id) },
-    });
-
-    res.status(200).json({ message: 'Login deletado com sucesso', login: loginDeletado });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erro ao deletar o login' });
-  }
-};
+const del = async (req, res) => {
+    const { id } = req.params;
+    try {
+        await prisma.user.delete({
+            where: { id: Number(id) }
+        });
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao deletar user', details: error.message });
+    }
+}
 
 module.exports = {
-  create,
-  read,
-  readOne,
-  update,
-  remove,
-  autenticar,
+    login,
+    read,
+    create,
+    update,
+    del
 };
-
-
-
-
-
-
-
