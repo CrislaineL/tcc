@@ -27,13 +27,14 @@
   <div id="produtosLista" class="produtos-container">
   </div>
 
+  <script src="./js/api.js"></script>
+  
   <script>
-    const apiVercel = 'https://backend-tcc-petshop-petgato-2025.vercel.app/produto';
-
+    
     async function buscarTodosProdutos() {
       try {
         const [resVercel] = await Promise.all([
-          fetch(apiVercel)
+          fetch(urlVercel)
         ]);
         const dadosVercel = resVercel.ok ? await resVercel.json() : [];
 

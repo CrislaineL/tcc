@@ -1,4 +1,4 @@
-const urlVercel = "https://back-end-tcc-gamma.vercel.app/produto";
+const urlVercel = "https://backend-tcc-gamma.vercel.app/produto";
 
 async function buscarProdutos() {
     try {
