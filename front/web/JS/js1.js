@@ -8,14 +8,14 @@ async function Cadastrar() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/u", {
+        const response = await fetch("https://backend-tcc-petshop-petgato-2025.vercel.app/cadastro", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, senha })
         });
 
         if (response.ok) {
-            alert("Cadastro realizado com sucesso! Verifique seu email.");
+            alert("Cadastro realizado com sucesso!");
             window.location.href = "index.html";
         } else {
             const erro = await response.text();
