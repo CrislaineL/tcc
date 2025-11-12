@@ -3,14 +3,13 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-let index = 0; // índice da imagem central
-let autoSlide; // autoplay
+let index = 0;
+let autoSlide; 
 
-// Cria as bolinhas de acordo com a quantidade de imagens
 imgs.forEach((_, i) => {
     const dot = document.createElement('div');
     dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active-dot'); // primeira bolinha ativa
+    if (i === 0) dot.classList.add('active-dot'); 
     dot.addEventListener('click', () => {
         index = i;
         updateCarousel();
@@ -26,13 +25,13 @@ function updateCarousel() {
         img.classList.remove('active', 'left', 'right', 'hidden');
 
         if (i === index) {
-            img.classList.add('active'); // central
+            img.classList.add('active'); 
         } else if (i === (index - 1 + imgs.length) % imgs.length) {
-            img.classList.add('left'); // esquerda
+            img.classList.add('left'); 
         } else if (i === (index + 1) % imgs.length) {
-            img.classList.add('right'); // direita
+            img.classList.add('right'); 
         } else {
-            img.classList.add('hidden'); // fora do foco
+            img.classList.add('hidden'); 
         }
     });
     dots.forEach((dot, i) => {
