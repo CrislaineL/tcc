@@ -11,10 +11,9 @@ async function Cadastrar() {
         alert("Por favor, preencha os campos corretamente.");
         return;
     }
-    const urlVercel = 'https://back-end-tcc-gamma.vercel.app/consultas';
 
     try {
-        const promiseVercel = fetch(urlVercel, {
+        const promiseVercel = fetch(apiVercel, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
