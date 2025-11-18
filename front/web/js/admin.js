@@ -1,5 +1,3 @@
-const urlVercel = "https://backend-tcc-gamma.vercel.app/produto";
-
 async function buscarProdutos() {
     try {
         const [ responseVercel] = await Promise.all([
@@ -66,11 +64,9 @@ function getRandomColor() {
     return color;
 }
 
-// Inicia o carousel de textos
 changeText();
 setInterval(changeText, 3000);
 
-// Banner background color change
 const banner = document.querySelector(".banner");
 const bannerTexts = document.querySelectorAll(".banner-text");
 let bannerIndex = 0;
@@ -79,7 +75,6 @@ function showNextText() {
     bannerTexts.forEach(text => text.classList.remove("active"));
     bannerTexts[bannerIndex].classList.add("active");
 
-    // Muda a cor do banner conforme o texto ativo
     if (bannerIndex === 0) banner.style.backgroundColor = "#00a6f3f6";
     else if (bannerIndex === 1) banner.style.backgroundColor = "#0303fffb";
     else if (bannerIndex === 2) banner.style.backgroundColor = "#eeff00ff";
