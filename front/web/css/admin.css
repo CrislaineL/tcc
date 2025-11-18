@@ -5,13 +5,13 @@
 }
 
 :root {
-  --font-family: 'CircularXX', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+   --font-family: 'CircularXX', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --c1: linear-gradient(to right, rgb(180, 227, 241), rgb(75, 197, 235));
   --c2: rgb(180, 227, 241);
   --c3: rgb(75, 197, 235);
   --c4: rgba(197, 218, 226, 0.623);
-  --c5: rgba(157, 201, 56, 0.795);
-  --c6: rgb(27, 2, 168); 
+  --c5: rgba(53, 153, 85, 0.823);
+  --c6: rgb(27, 2, 168);
   --c7: linear-gradient(to right, rgb(22, 8, 214), rgb(1, 1, 116));
   --t1: rgb(53, 54, 56);
   --t2: rgba(0, 0, 0, 0.7);
