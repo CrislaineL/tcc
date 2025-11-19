@@ -1,0 +1,110 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgba(242,246,248,1);
+}
+
+/* Cabeçalho */
+header {
+  background-color: #e9bfc3ff;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+header nav a {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+header nav .icon {
+  width: 50px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+/* Container principal */
+.container {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;       /* permite quebrar linha */
+  justify-content: center;
+  gap: 16px;             /* espaço entre os cards */
+}
+
+/* Título */
+.titulo {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #e9bfc3ff;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  width: 220px;          /* largura menor para caber lado a lado */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #e9bfc3ff;
+}
+
+/* Imagem dentro do card */
+.imagem {
+  width: 100%;
+  height: 160px;         /* altura reduzida */
+  border-radius: 10px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+/* Nome do gato */
+.nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Botões */
+.botoesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.botao {
+  background-color: #e9bfc3ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.botaoVoltar {
+  background-color: #e9bfc3ff;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;   /* ocupa toda largura no celular */
+  }
+}
