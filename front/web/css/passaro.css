@@ -1,11 +1,9 @@
-/* Reset básico */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: rgba(242,246,248,1);
 }
 
-/* Cabeçalho */
 header {
   background-color: #fac98dff;
   color: white;
@@ -34,16 +32,14 @@ header nav .icon {
   vertical-align: middle;
 }
 
-/* Container principal */
 .container {
   padding: 16px;
   display: flex;
-  flex-wrap: wrap;       /* permite quebrar linha */
+  flex-wrap: wrap;      
   justify-content: center;
-  gap: 16px;             /* espaço entre os cards */
+  gap: 16px;            
 }
 
-/* Título */
 .titulo {
   width: 100%;
   font-size: 24px;
@@ -53,34 +49,30 @@ header nav .icon {
   color: #fac98dff;
 }
 
-/* Card */
 .card {
   background-color: #fff;
   border-radius: 10px;
   padding: 12px;
-  width: 220px;          /* largura menor para caber lado a lado */
+  width: 220px;          
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border: 1px solid #fac98dff;
 }
 
-/* Imagem dentro do card */
 .imagem {
   width: 100%;
-  height: 160px;         /* altura reduzida */
+  height: 160px;         
   border-radius: 10px;
   margin-bottom: 8px;
   object-fit: cover;
 }
 
-/* Nome do pássaro */
 .nome {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 4px;
 }
 
-/* Botões */
 .botoesContainer {
   display: flex;
   justify-content: center;
@@ -102,9 +94,8 @@ header nav .icon {
   background-color: #fac98dff;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 600px) {
   .card {
-    width: 100%;   /* ocupa toda largura no celular */
+    width: 100%; 
   }
 }
