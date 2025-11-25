@@ -49,12 +49,10 @@ document.getElementById('pagamento').addEventListener('change', e => {
   const pixDiv = document.getElementById('pagamentoPix');
   const cartaoDiv = document.getElementById('pagamentoCartao');
 
-  // Oculta tudo
   parcelas.style.display = 'none';
   pixDiv.style.display = 'none';
   cartaoDiv.style.display = 'none';
 
-  // Exibe conforme o tipo
   if (e.target.value === 'credito') {
     parcelas.style.display = 'block';
     cartaoDiv.style.display = 'block';
@@ -62,7 +60,7 @@ document.getElementById('pagamento').addEventListener('change', e => {
     cartaoDiv.style.display = 'block';
   } else if (e.target.value === 'pix') {
     pixDiv.style.display = 'block';
-    gerarQrCodePix(); // chama função abaixo
+    gerarQrCodePix();
   }
 });
 
@@ -74,8 +72,6 @@ function gerarQrCodePix() {
     if (error) console.error(error);
   });
 }
-
-
 
 document.getElementById('finalizar').addEventListener('click', async () => {
   const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -96,7 +92,6 @@ document.getElementById('finalizar').addEventListener('click', async () => {
     return;
   }
 
-  // Monta o texto do pedido
   let mensagem = `*Novo pedido da loja PetGatô!*\n\n`;
   mensagem += `*Nome:* ${entrega.nome}\n`;
   mensagem += `*Endereço:* ${entrega.endereco}, ${entrega.bairro}, ${entrega.cidade}\n`;
