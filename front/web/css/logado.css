@@ -120,6 +120,10 @@ header button:hover {
   align-items: center;
 }
 
+#sair{
+  color: white;
+}
+
 .Containerheader button {
   width: 130px;
   border: none;
