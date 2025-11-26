@@ -34,7 +34,7 @@ body {
 
 header {
   background: var(--c6);
-  color: rgb(0, 0, 0);
+  color: black;
   width: 100%;
   height: 85px;
   display: flex;
@@ -44,6 +44,23 @@ header {
   z-index: 1000; 
   justify-content: space-around; 
   align-items: center; 
+  max-width: 100%;
+}
+.Containerheader {
+  background-color: rgba(231, 231, 250, 0.445);
+  position: sticky; 
+  top: var(--header-height); 
+  left: 0;
+  width: 100%;
+  height: 43px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  z-index: 999; 
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+  gap: 15px; 
+  padding: 0 10px;
 }
 
 header h1 {
@@ -54,7 +71,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   top: 0px;
-  left: 8%; 
+  left: 20%; 
   cursor: pointer; 
 }
 
@@ -79,7 +96,7 @@ header button:hover {
 
 @media (max-width: 200%) {
   header h1 {
-    width: 50%;
+    width: 100%;
     font-size: 30px;
   }
 }
@@ -88,7 +105,7 @@ header button:hover {
     width: 100%;
     font-size: 30px;
     position: fixed;
-    top: 0;left: -10%;
+
   }
 }
 
@@ -114,7 +131,7 @@ header button:hover {
   top: 85px;
   left: 0;
   width: 100%;
-  height: 45px;
+  height: 43px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -131,7 +148,7 @@ header button:hover {
   display: flex; 
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 6px; 
 }
 
 .Containerheader button img {
@@ -388,9 +405,7 @@ header button:hover {
 
 .fundo-svg {
   position: absolute;
-  left: 0;
-  top: -16%;
-  width: 200%;
+  width: 100%;
   height: 150%;            
   pointer-events: none;     
   display: block;
@@ -780,7 +795,6 @@ header button:hover {
     margin: 0;
 }
 
-  
 /* BLOG */
   
 
@@ -983,7 +997,7 @@ header button:hover {
 }
 
   
-/* FOOTER                                   */
+/* FOOTER */
   
 
 .footer {
@@ -1097,11 +1111,9 @@ header button:hover {
 .footer-section ul li a:hover {
   color: #fff;
 }
-
   
 /* MEDIA QUERIES (Responsividade) */
   
-
 /* Telas muito pequenas (Smartphones em modo retrato, até 480px) */
 @media (max-width: 480px) {
     header h1 {
