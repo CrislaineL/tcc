@@ -83,7 +83,7 @@ header img {
 header button {
   background-color: transparent;
   border: none;
-  color: black; 
+  color: rgb(255, 253, 253); 
   font-weight: bold; 
   cursor: pointer;
 }
